@@ -78,28 +78,73 @@ const Index = () => {
           {/* Feature 1: Identify */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <Card className="p-12 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-0 rounded-3xl shadow-sm">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-sm">
-                    <Target className="w-8 h-8 text-orange-600" />
-                  </div>
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="text-sm font-medium text-muted-foreground">IDENTIFY</div>
-                      <h3 className="text-2xl font-bold">At-Risk Dashboard</h3>
+              <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+                <div className="p-8 bg-background">
+                  <div className="grid grid-cols-3 gap-4 mb-8">
+                    <div className="bg-card border-l-4 border-red-500 rounded-xl p-6">
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <div className="text-sm font-semibold text-foreground mb-1">At-Risk Customers</div>
+                          <div className="text-xs text-muted-foreground">Needs immediate attention</div>
+                        </div>
+                        <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+                          <Target className="w-5 h-5 text-red-600" />
+                        </div>
+                      </div>
+                      <div className="text-3xl font-bold mb-2">26</div>
+                      <div className="text-xs text-red-600 font-medium">Take action →</div>
                     </div>
-                    <div className="space-y-3 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                        <span>Real-time health scores</span>
+                    <div className="bg-card border-l-4 border-green-500 rounded-xl p-6">
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <div className="text-sm font-semibold text-foreground mb-1">Stable Customers</div>
+                          <div className="text-xs text-muted-foreground">No action needed</div>
+                        </div>
+                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                          <Shield className="w-5 h-5 text-green-600" />
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-orange-500"></div>
-                        <span>Risk level segmentation</span>
+                      <div className="text-3xl font-bold mb-2">24</div>
+                      <div className="text-xs text-green-600 font-medium">Monitor →</div>
+                    </div>
+                    <div className="bg-card border-l-4 border-blue-500 rounded-xl p-6">
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <div className="text-sm font-semibold text-foreground mb-1">Upsell Opportunities</div>
+                          <div className="text-xs text-muted-foreground">High-potential customers</div>
+                        </div>
+                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                          <TrendingUp className="w-5 h-5 text-blue-600" />
+                        </div>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                        <span>Churn signal detection</span>
+                      <div className="text-3xl font-bold mb-2">7</div>
+                      <div className="text-xs text-blue-600 font-medium">Capture revenue →</div>
+                    </div>
+                  </div>
+                  <div className="border border-border rounded-xl p-4 bg-card">
+                    <div className="text-xs font-semibold text-muted-foreground mb-4">CUSTOMER OVERVIEW</div>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-4 text-xs">
+                        <div className="flex-1 font-medium text-foreground">Contact 38 • Initech</div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
+                            <div className="w-1/5 h-full bg-red-500"></div>
+                          </div>
+                          <span className="text-muted-foreground">2</span>
+                        </div>
+                        <span className="text-red-600 font-semibold">Critical</span>
+                        <span className="text-muted-foreground">Multiple support tickets</span>
+                      </div>
+                      <div className="flex items-center gap-4 text-xs">
+                        <div className="flex-1 font-medium text-foreground">Contact 7 • Hooli</div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
+                            <div className="w-1/4 h-full bg-red-500"></div>
+                          </div>
+                          <span className="text-muted-foreground">7</span>
+                        </div>
+                        <span className="text-red-600 font-semibold">Critical</span>
+                        <span className="text-muted-foreground">Payment issues</span>
                       </div>
                     </div>
                   </div>
@@ -111,10 +156,7 @@ const Index = () => {
                 Spot Which Customers Are At Risk
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Stop guessing. Our AI instantly identifies the signals of churn and shows you exactly who needs your attention—before it's too late.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Every lost customer is revenue walking out the door. Don't let that happen.
+                Identify the signals of churn and intervene before it is too late.
               </p>
             </div>
           </div>
@@ -126,34 +168,61 @@ const Index = () => {
                 Keep Your Customers
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Know exactly why each customer is at risk and get proven strategies to win them back.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                No more generic outreach. Get personalized action plans that actually work to save relationships and protect your revenue.
+                Learn why your customer is at risk and how you should act to keep them.
               </p>
             </div>
-            <Card className="p-12 bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50 border-0 rounded-3xl shadow-sm">
-              <div className="space-y-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-sm">
-                  <Shield className="w-8 h-8 text-purple-600" />
-                </div>
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <div className="text-sm font-medium text-muted-foreground">RETAIN</div>
-                    <h3 className="text-2xl font-bold">Action Recommendations</h3>
+            <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+              <div className="p-8 bg-background">
+                <div className="grid grid-cols-3 gap-6 mb-6">
+                  <div className="col-span-1">
+                    <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score</div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
+                        <div className="w-1/12 h-full bg-red-500"></div>
+                      </div>
+                      <span className="text-2xl font-bold text-red-600">1</span>
+                    </div>
+                    <div className="mt-2 text-xs text-muted-foreground">Previous: 0</div>
                   </div>
-                  <div className="space-y-3 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                      <span>Root cause analysis</span>
+                  <div className="col-span-2 bg-red-50 rounded-xl p-4">
+                    <div className="text-xs font-semibold text-red-900 mb-2">Risk Analysis</div>
+                    <div className="text-sm text-red-800">Contact 49 from Wayne Enterprises is <span className="font-bold">at critical risk of churning</span></div>
+                    <div className="mt-3">
+                      <div className="text-xs font-semibold text-red-900 mb-1">Primary Reason:</div>
+                      <div className="text-sm text-red-800">Payment issues</div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-pink-500"></div>
-                      <span>Personalized playbooks</span>
+                  </div>
+                </div>
+                <div className="bg-blue-50 rounded-xl p-4 mb-6">
+                  <div className="text-xs font-semibold text-blue-900 mb-3">Recommended Actions</div>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-blue-800">
+                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">1</span>
+                      <span>Schedule an urgent check-in call</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-rose-500"></div>
-                      <span>Success tracking</span>
+                    <div className="flex items-center gap-2 text-sm text-blue-800">
+                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">2</span>
+                      <span>Send gift card for feedback</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-blue-800">
+                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">3</span>
+                      <span>Create custom success plan</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="border border-border rounded-xl p-4 bg-card">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xs font-semibold text-foreground">Action Plans</div>
+                    <Button size="sm" className="h-7 text-xs rounded-full">+ New Plan</Button>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="text-xs">
+                      <div className="font-semibold text-foreground mb-1">Billing discussion</div>
+                      <div className="text-muted-foreground mb-2">Contact to discuss payment options and potential plan adjustments</div>
+                      <div className="flex gap-2">
+                        <Button size="sm" variant="ghost" className="h-6 text-xs text-blue-600">Start</Button>
+                        <Button size="sm" variant="ghost" className="h-6 text-xs text-green-600">Complete</Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -164,30 +233,55 @@ const Index = () => {
           {/* Feature 3: Grow */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <Card className="p-12 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 border-0 rounded-3xl shadow-sm">
-                <div className="space-y-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-sm">
-                    <TrendingUp className="w-8 h-8 text-green-600" />
+              <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+                <div className="p-8 bg-background">
+                  <div className="bg-blue-50 rounded-xl p-4 mb-6">
+                    <div className="flex items-center gap-2 text-sm text-blue-900 mb-2">
+                      <TrendingUp className="w-5 h-5 text-blue-600" />
+                      <span className="font-semibold">This customer shows high potential for an upsell from <span className="text-blue-600">Pro</span> to <span className="text-blue-600">Enterprise</span>.</span>
+                    </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="text-sm font-medium text-muted-foreground">GROW</div>
-                      <h3 className="text-2xl font-bold">Expansion Opportunities</h3>
+                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-border">
+                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-xl font-bold">C32</div>
+                    <div>
+                      <div className="text-lg font-semibold text-foreground">Contact 32</div>
+                      <div className="text-sm text-muted-foreground">Initech</div>
                     </div>
-                    <div className="space-y-3 text-sm text-muted-foreground">
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-card border border-border rounded-xl p-4">
+                      <div className="text-xs font-semibold text-muted-foreground mb-2">Current Tier:</div>
+                      <div className="text-xl font-bold text-foreground mb-1">Pro</div>
+                      <div className="text-xs text-blue-600 font-medium">Upgrade to: Enterprise</div>
+                    </div>
+                    <div className="bg-card border border-border rounded-xl p-4">
+                      <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score:</div>
                       <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                        <span>Upsell readiness scoring</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
-                        <span>Engagement trend analysis</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full bg-teal-500"></div>
-                        <span>Perfect timing alerts</span>
+                        <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
+                          <div className="w-4/5 h-full bg-green-500"></div>
+                        </div>
+                        <span className="text-xl font-bold text-green-600">79</span>
                       </div>
                     </div>
+                    <div className="bg-card border border-border rounded-xl p-4">
+                      <div className="text-xs font-semibold text-muted-foreground mb-2">Current Revenue:</div>
+                      <div className="text-xl font-bold text-foreground">$5,301</div>
+                    </div>
+                    <div className="bg-card border border-border rounded-xl p-4">
+                      <div className="text-xs font-semibold text-muted-foreground mb-2">Potential Revenue:</div>
+                      <div className="text-xl font-bold text-green-600">$10,602</div>
+                      <div className="text-xs text-green-600 flex items-center gap-1">
+                        <TrendingUp className="w-3 h-3" />
+                        <span>+100%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-blue-50 rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <TrendingUp className="w-5 h-5 text-blue-600" />
+                      <span className="text-sm font-semibold text-blue-900">Upsell Opportunity</span>
+                    </div>
+                    <div className="text-sm text-blue-800">Ready for Enterprise upgrade</div>
                   </div>
                 </div>
               </Card>
@@ -197,10 +291,7 @@ const Index = () => {
                 Grow Your Business
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Don't just prevent churn—unlock growth. Find accounts that are ready to expand and strike while the iron is hot.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Your best customers are waiting to give you more revenue. We'll show you exactly when to ask.
+                Find the accounts that are ready to expand and act quickly.
               </p>
             </div>
           </div>
