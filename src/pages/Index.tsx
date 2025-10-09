@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Target, Shield, TrendingUp, Sparkles } from "lucide-react";
+import { Target, Shield, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-dashboard.png";
 
 const Index = () => {
   return (
@@ -25,30 +26,41 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20 md:py-32">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent rounded-full text-sm text-muted-foreground border border-border">
-            <Sparkles className="w-4 h-4" />
-            <span>AI-Powered Churn Prevention</span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent rounded-full text-sm text-muted-foreground border border-border">
+              <Sparkles className="w-4 h-4" />
+              <span>AI-Powered Churn Prevention</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight leading-tight">
+              Your Customers Are Leaving.
+              <br />
+              <span className="text-primary">We Stop Them.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Every churned customer is lost revenue you'll never get back. Butter AI predicts who's about to leave—and tells you exactly how to save them.
+            </p>
+            <div className="flex gap-4 justify-center lg:justify-start flex-wrap pt-4">
+              <Button size="lg" className="text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all group">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-full">
+                Watch Demo
+              </Button>
+            </div>
+            <p className="text-sm text-muted-foreground pt-4">
+              No credit card required • Free 14-day trial • Setup in 5 minutes
+            </p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight leading-tight">
-            Stop Losing Customers.
-            <br />
-            Start Growing Revenue.
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Don't let churn destroy your business. Identify at-risk customers before they leave and take action that actually works.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap pt-4">
-            <Button size="lg" className="text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all">
-              Start Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-full">
-              Watch Demo
-            </Button>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
+            <img 
+              src={heroImage} 
+              alt="Butter AI Dashboard showing customer health scores and churn prevention" 
+              className="relative rounded-3xl shadow-2xl border border-border"
+            />
           </div>
-          <p className="text-sm text-muted-foreground pt-4">
-            No credit card required • Free 14-day trial
-          </p>
         </div>
       </section>
 
