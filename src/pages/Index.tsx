@@ -7,31 +7,8 @@ import { ParallaxCard } from "@/components/ParallaxCard";
 import { useEffect, useState } from "react";
 
 const Index = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [cursorVariant, setCursorVariant] = useState('default');
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
     <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
-      {/* Custom cursor effect */}
-      <div
-        className="fixed w-6 h-6 rounded-full border-2 border-primary pointer-events-none z-50 mix-blend-difference"
-        style={{
-          left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`,
-          transform: 'translate(-50%, -50%)',
-          transition: 'width 0.2s, height 0.2s',
-          width: cursorVariant === 'hover' ? '48px' : '24px',
-          height: cursorVariant === 'hover' ? '48px' : '24px',
-        }}
-      />
       
       {/* Animated background orbs */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
@@ -58,11 +35,8 @@ const Index = () => {
             <span className="text-xl font-bold gradient-text">Butter AI</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm hover:bg-primary/10 transition-all hover:scale-105">
-              Sign In
-            </Button>
             <MagneticButton className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient">
-              Get Started
+              Join Waitlist
             </MagneticButton>
           </div>
         </div>
@@ -73,7 +47,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm text-muted-foreground border border-primary/20 animate-slide-up shadow-lg hover:shadow-primary/20 transition-all">
             <Zap className="w-4 h-4 text-primary animate-pulse" />
-            <span>AI-Powered Churn Prevention</span>
+            <span>Coming Soon • Pre-Launch Access</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
             <span className="gradient-text">Stop Losing Customers.</span>
@@ -81,34 +55,22 @@ const Index = () => {
             <span className="text-foreground">Start Growing Revenue.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Don't let churn destroy your business. Identify at-risk customers before they leave and take action that actually works.
+            Join the waitlist for early access. Be among the first to identify at-risk customers and prevent churn before it happens.
           </p>
           <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <MagneticButton 
               size="lg" 
               className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden"
-              onMouseEnter={() => setCursorVariant('hover')}
-              onMouseLeave={() => setCursorVariant('default')}
             >
               <span className="relative z-10 flex items-center">
-                Start Free Trial
+                Get Early Access
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 animate-shimmer"></div>
             </MagneticButton>
-            <MagneticButton 
-              size="lg" 
-              variant="outline" 
-              className="text-base px-8 py-6 rounded-full border-2 hover:bg-primary/5 hover:border-primary transition-all relative overflow-hidden group"
-              onMouseEnter={() => setCursorVariant('hover')}
-              onMouseLeave={() => setCursorVariant('default')}
-            >
-              <span className="relative z-10">Watch Demo</span>
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity"></div>
-            </MagneticButton>
           </div>
           <p className="text-sm text-muted-foreground pt-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            No credit card required • Free 14-day trial
+            Be the first to know when we launch • Exclusive founding member benefits
           </p>
         </div>
       </section>
@@ -425,37 +387,25 @@ const Index = () => {
                 <Sparkles className="w-12 h-12 text-white animate-pulse" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                Ready to Save Your Customers?
+                Join the Pre-Launch Waitlist
               </h2>
               <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-                Every day you wait, you lose more revenue. Start preventing churn today—no credit card required.
+                Be among the first to experience Butter AI. Sign up now for exclusive early access and founding member benefits.
               </p>
               <div className="flex gap-4 justify-center flex-wrap pt-4">
                 <MagneticButton 
                   size="lg" 
                   className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden"
-                  onMouseEnter={() => setCursorVariant('hover')}
-                  onMouseLeave={() => setCursorVariant('default')}
                 >
                   <span className="relative z-10 flex items-center">
-                    Start Free Trial
+                    Reserve Your Spot
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
                 </MagneticButton>
-                <MagneticButton 
-                  size="lg" 
-                  variant="outline" 
-                  className="text-base px-8 py-6 rounded-full border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm group relative overflow-hidden"
-                  onMouseEnter={() => setCursorVariant('hover')}
-                  onMouseLeave={() => setCursorVariant('default')}
-                >
-                  <span className="relative z-10">Talk to Sales</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity"></div>
-                </MagneticButton>
               </div>
               <p className="text-sm text-white/70 pt-4">
-                14-day free trial • No credit card required • Cancel anytime
+                Limited spots available • No commitment required • Exclusive founding member pricing
               </p>
             </div>
           </ParallaxCard>
