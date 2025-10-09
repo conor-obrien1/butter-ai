@@ -45,10 +45,10 @@ const Index = () => {
             </Card>
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-foreground">
-                Know who needs attention
+                Spot Which Customers Are At Risk
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Instantly identify which customers need attention without manual analysis. Our AI-powered health scores prioritize your outreach to those who need it most, giving you peace of mind and the ability to predict your revenue.
+                Identify the signals of churn and intervene before it is too late.
               </p>
             </div>
           </div>
@@ -57,10 +57,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4 md:order-2">
               <h2 className="text-4xl font-bold text-foreground">
-                Act before it's too late
+                Keep Your Customers
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Get the reasoning behind every risk score with actionable recommendations. We prioritize customers by likelihood to churn and tell you exactly what to do to keep them, so you can step in at the right moment.
+                Learn why your customer is at risk and how you should act to keep them.
               </p>
             </div>
             <Card className="p-8 bg-primary/5 border-primary/20 rounded-3xl md:order-1">
@@ -91,10 +91,10 @@ const Index = () => {
             </Card>
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-foreground">
-                Build a better product
+                Grow your business
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Discover why customers leave and what keeps them engaged. Our insights help you identify patterns across your customer base, so you can improve your product and reduce future churn.
+                Find the accounts that are ready to expand and act quickly.
               </p>
             </div>
           </div>
