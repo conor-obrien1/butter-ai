@@ -99,7 +99,7 @@ const Index = () => {
                     <TrendingUp className="w-8 h-8 text-secondary animate-pulse" />
                   </div>
                   <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">80%</div>
-                  <p className="text-muted-foreground">Of revenue comes from existing customers</p>
+                  <p className="text-muted-foreground">Growth comes from keeping your current customers happy</p>
                 </div>
               </ParallaxCard>
             </ScrollReveal>
