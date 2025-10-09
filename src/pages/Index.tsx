@@ -34,6 +34,12 @@ const Index = () => {
             </div>
             <span className="text-xl font-bold gradient-text">Butter AI</span>
           </div>
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
+            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
+            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
+            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+          </div>
           <div className="flex items-center gap-4">
             <MagneticButton className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient">
               Join Waitlist
@@ -120,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-6 py-20 md:py-32">
+      <section id="features" className="container mx-auto px-6 py-20 md:py-32">
         <div className="max-w-6xl mx-auto space-y-32">
           {/* Feature 1: Identify */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -356,6 +362,274 @@ const Index = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <ScrollReveal>
+        <section id="how-it-works" className="container mx-auto px-6 py-20 md:py-32 relative">
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold">
+                <span className="gradient-text">How It Works</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Three simple steps to revolutionize your customer retention
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <ScrollReveal delay={0}>
+                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
+                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    1
+                  </div>
+                  <div className="mt-4 space-y-4">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+                      <Target className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Connect Your Data</h3>
+                    <p className="text-muted-foreground">
+                      Seamlessly integrate with your CRM, billing, and support tools. Our AI starts learning from day one.
+                    </p>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
+                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    2
+                  </div>
+                  <div className="mt-4 space-y-4">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+                      <Zap className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Get AI Insights</h3>
+                    <p className="text-muted-foreground">
+                      Our AI analyzes patterns, predicts churn risk, and identifies upsell opportunities in real-time.
+                    </p>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
+                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                    3
+                  </div>
+                  <div className="mt-4 space-y-4">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
+                      <TrendingUp className="w-8 h-8 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Take Action</h3>
+                    <p className="text-muted-foreground">
+                      Get personalized action plans and automated workflows to retain customers and grow revenue.
+                    </p>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* Pricing Section */}
+      <ScrollReveal>
+        <section id="pricing" className="container mx-auto px-6 py-20 md:py-32">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold">
+                <span className="gradient-text">Founding Member Pricing</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Lock in exclusive lifetime discounts by joining early
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 mt-16">
+              <ScrollReveal delay={0}>
+                <ParallaxCard className="p-8 glass border-2 border-border rounded-3xl hover-lift">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Starter</h3>
+                      <p className="text-muted-foreground">Perfect for small teams</p>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-bold gradient-text">$99</div>
+                      <div className="text-muted-foreground">/month</div>
+                      <div className="text-sm text-primary mt-1">Regular: $149/mo</div>
+                    </div>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Up to 500 customers</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Basic AI insights</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Email support</span>
+                      </li>
+                    </ul>
+                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
+                      Reserve Spot
+                    </MagneticButton>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+
+              <ScrollReveal delay={100}>
+                <ParallaxCard className="p-8 glass border-2 border-primary/40 rounded-3xl hover-lift relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-primary rounded-full text-xs font-bold text-white">
+                    MOST POPULAR
+                  </div>
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Growth</h3>
+                      <p className="text-muted-foreground">For scaling businesses</p>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-bold gradient-text">$299</div>
+                      <div className="text-muted-foreground">/month</div>
+                      <div className="text-sm text-primary mt-1">Regular: $449/mo</div>
+                    </div>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Up to 2,500 customers</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Advanced AI predictions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Priority support</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Custom integrations</span>
+                      </li>
+                    </ul>
+                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
+                      Reserve Spot
+                    </MagneticButton>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <ParallaxCard className="p-8 glass border-2 border-border rounded-3xl hover-lift">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
+                      <p className="text-muted-foreground">For large organizations</p>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-bold gradient-text">Custom</div>
+                      <div className="text-muted-foreground">Let's talk</div>
+                    </div>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Unlimited customers</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">White-label options</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Dedicated success manager</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        </div>
+                        <span className="text-sm">Custom AI training</span>
+                      </li>
+                    </ul>
+                    <MagneticButton variant="outline" className="w-full border-2 rounded-full py-3">
+                      Contact Sales
+                    </MagneticButton>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
+      {/* FAQ Section */}
+      <ScrollReveal>
+        <section id="faq" className="container mx-auto px-6 py-20 md:py-32">
+          <div className="max-w-3xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold">
+                <span className="gradient-text">Frequently Asked</span> Questions
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
+                <h3 className="font-bold text-lg mb-2">When will Butter AI launch?</h3>
+                <p className="text-muted-foreground">
+                  We're planning to launch in Q2 2025. Waitlist members will get early access and exclusive founding member pricing.
+                </p>
+              </ParallaxCard>
+
+              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
+                <h3 className="font-bold text-lg mb-2">What integrations do you support?</h3>
+                <p className="text-muted-foreground">
+                  We'll launch with support for major CRMs (Salesforce, HubSpot), billing platforms (Stripe, Chargebee), and support tools (Zendesk, Intercom). Custom integrations available for Enterprise.
+                </p>
+              </ParallaxCard>
+
+              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
+                <h3 className="font-bold text-lg mb-2">How does the AI work?</h3>
+                <p className="text-muted-foreground">
+                  Our AI analyzes customer behavior patterns, engagement metrics, support tickets, and billing data to predict churn risk and identify growth opportunities with 95% accuracy.
+                </p>
+              </ParallaxCard>
+
+              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
+                <h3 className="font-bold text-lg mb-2">Is my data secure?</h3>
+                <p className="text-muted-foreground">
+                  Absolutely. We use enterprise-grade encryption, SOC 2 compliance, and never share your data with third parties. Your customer data stays yours.
+                </p>
+              </ParallaxCard>
+
+              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
+                <h3 className="font-bold text-lg mb-2">What makes Butter AI different?</h3>
+                <p className="text-muted-foreground">
+                  Unlike traditional analytics tools, our AI doesn't just show you data—it tells you exactly what to do and automates the retention workflows for you.
+                </p>
+              </ParallaxCard>
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* Social Proof */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-12">
@@ -414,11 +688,56 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="container mx-auto px-6 py-12 border-t border-border/50">
-        <div className="text-center text-sm text-muted-foreground">
-          <p className="flex items-center justify-center gap-2">
-            Made with <Sparkles className="w-4 h-4 text-primary animate-pulse" /> by <span className="gradient-text font-semibold">Butter AI</span>
-          </p>
-          <p className="mt-2">© 2025 Butter AI. All rights reserved.</p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-primary" />
+                <span className="font-bold gradient-text">Butter AI</span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                AI-powered customer retention that actually works.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
+                <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
+                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Resources</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#faq" className="hover:text-foreground transition-colors">FAQ</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Documentation</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              © 2025 Butter AI. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-sm text-muted-foreground">Made with</p>
+              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+              <p className="text-sm text-muted-foreground">by the Butter team</p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
