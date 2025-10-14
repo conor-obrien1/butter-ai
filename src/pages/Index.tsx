@@ -1,66 +1,77 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Target, Shield, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-dashboard.png";
+import { Target, Shield, TrendingUp, Sparkles, Zap, ArrowRight, Star } from "lucide-react";
+import { MagneticButton } from "@/components/MagneticButton";
+import { ScrollReveal } from "@/components/ScrollReveal";
+import { ParallaxCard } from "@/components/ParallaxCard";
+import { useEffect, useState } from "react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
+      
+      {/* Animated background orbs */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-glow"></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '-1.5s' }}></div>
+        
+        {/* Animated gradient mesh overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 animate-gradient"></div>
+        </div>
+      </div>
+
       {/* Navigation */}
-      <nav className="container mx-auto px-6 py-6">
+      <nav className="container mx-auto px-6 py-6 sticky top-0 z-50 glass backdrop-blur-xl border-b border-border/50 animate-slide-up">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6" />
-            <span className="text-xl font-bold">Butter AI</span>
+            <div className="relative">
+              <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+              <div className="absolute inset-0 blur-md bg-primary/50 animate-glow"></div>
+              <div className="absolute inset-0 blur-xl bg-secondary/30 animate-glow" style={{ animationDelay: '-1.5s' }}></div>
+            </div>
+            <span className="text-xl font-bold gradient-text">Butter AI</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm">
-              Sign In
-            </Button>
-            <Button className="text-sm rounded-full px-6">
-              Get Started
-            </Button>
+            <MagneticButton className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient">
+              Join Waitlist
+            </MagneticButton>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-20 md:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          <div className="space-y-8 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent rounded-full text-sm text-muted-foreground border border-border">
-              <Sparkles className="w-4 h-4" />
-              <span>AI-Powered Churn Prevention</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight leading-tight">
-              Your Customers Are Leaving.
-              <br />
-              <span className="text-primary">We Stop Them.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Every churned customer is lost revenue you'll never get back. Butter AI predicts who's about to leave—and tells you exactly how to save them.
-            </p>
-            <div className="flex gap-4 justify-center lg:justify-start flex-wrap pt-4">
-              <Button size="lg" className="text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all group">
-                Start Free Trial
+      <section className="container mx-auto px-6 py-20 md:py-32 relative">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm text-muted-foreground border border-primary/20 animate-slide-up shadow-lg hover:shadow-primary/20 transition-all">
+            <Zap className="w-4 h-4 text-primary animate-pulse" />
+            <span>Coming Soon • Pre-Launch Access</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <span className="gradient-text">Stop Losing Customers.</span>
+            <br />
+            <span className="text-foreground">Start Growing Revenue.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            Join the waitlist for early access. Be among the first to identify at-risk customers and prevent churn before it happens.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <MagneticButton 
+              size="lg" 
+              className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center">
+                Get Early Access
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-full">
-                Watch Demo
-              </Button>
-            </div>
-            <p className="text-sm text-muted-foreground pt-4">
-              No credit card required • Free 14-day trial • Setup in 5 minutes
-            </p>
+              </span>
+              <div className="absolute inset-0 animate-shimmer"></div>
+            </MagneticButton>
           </div>
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
-            <img 
-              src={heroImage} 
-              alt="Butter AI Dashboard showing customer health scores and churn prevention" 
-              className="relative rounded-3xl shadow-2xl border border-border"
-            />
-          </div>
+          <p className="text-sm text-muted-foreground pt-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            Be the first to know when we launch • Exclusive founding member benefits
+          </p>
         </div>
       </section>
 
@@ -68,18 +79,42 @@ const Index = () => {
       <section className="container mx-auto px-6 py-12">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 text-center border-border bg-card rounded-3xl">
-              <div className="text-4xl font-bold mb-2">5-7x</div>
-              <p className="text-muted-foreground">Cheaper to keep customers than acquire new ones</p>
-            </Card>
-            <Card className="p-8 text-center border-border bg-card rounded-3xl">
-              <div className="text-4xl font-bold mb-2">80%</div>
-              <p className="text-muted-foreground">Of revenue comes from existing customers</p>
-            </Card>
-            <Card className="p-8 text-center border-border bg-card rounded-3xl">
-              <div className="text-4xl font-bold mb-2">95%</div>
-              <p className="text-muted-foreground">Accuracy in predicting customer churn</p>
-            </Card>
+            <ScrollReveal delay={0}>
+              <ParallaxCard className="p-8 text-center border-border glass rounded-3xl hover-lift hover-glow group cursor-pointer relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-center mb-3">
+                    <Star className="w-8 h-8 text-primary animate-pulse" />
+                  </div>
+                  <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">5-7x</div>
+                  <p className="text-muted-foreground">Cheaper to keep customers than acquire new ones</p>
+                </div>
+              </ParallaxCard>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <ParallaxCard className="p-8 text-center border-border glass rounded-3xl hover-lift hover-glow group cursor-pointer relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-center mb-3">
+                    <TrendingUp className="w-8 h-8 text-secondary animate-pulse" />
+                  </div>
+                  <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">80%</div>
+                  <p className="text-muted-foreground">Growth comes from keeping your current customers happy</p>
+                </div>
+              </ParallaxCard>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <ParallaxCard className="p-8 text-center border-border glass rounded-3xl hover-lift hover-glow group cursor-pointer relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                <div className="relative">
+                  <div className="flex items-center justify-center mb-3">
+                    <Zap className="w-8 h-8 text-primary animate-pulse" />
+                  </div>
+                  <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">95%</div>
+                  <p className="text-muted-foreground">Accuracy in predicting customer churn</p>
+                </div>
+              </ParallaxCard>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -89,8 +124,9 @@ const Index = () => {
         <div className="max-w-6xl mx-auto space-y-32">
           {/* Feature 1: Identify */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
-              <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+            <ScrollReveal className="order-2 md:order-1">
+              <ParallaxCard className="p-0 glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20 card-3d relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
                 <div className="p-8 bg-background">
                   <div className="grid grid-cols-3 gap-4 mb-8">
                     <div className="bg-card border-l-4 border-red-500 rounded-xl p-6">
@@ -161,29 +197,35 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              </Card>
-            </div>
-            <div className="space-y-6 order-1 md:order-2">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Spot Which Customers Are At Risk
+              </ParallaxCard>
+            </ScrollReveal>
+            <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                <span className="gradient-text">Spot Which Customers</span>
+                <br />
+                <span className="text-foreground">Are At Risk</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Identify the signals of churn and intervene before it is too late.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* Feature 2: Retain */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Keep Your Customers
+            <ScrollReveal className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                <span className="gradient-text">Keep Your</span>
+                <br />
+                <span className="text-foreground">Customers</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Learn why your customer is at risk and how you should act to keep them.
               </p>
-            </div>
-            <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
+                <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
               <div className="p-8 bg-background">
                 <div className="grid grid-cols-3 gap-6 mb-6">
                   <div className="col-span-1">
@@ -239,13 +281,15 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </Card>
+              </ParallaxCard>
+            </ScrollReveal>
           </div>
 
           {/* Feature 3: Grow */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
-              <Card className="p-0 bg-white border border-border rounded-3xl shadow-lg overflow-hidden">
+            <ScrollReveal className="order-2 md:order-1">
+              <ParallaxCard className="p-0 glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20 card-3d relative group">
+                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
                 <div className="p-8 bg-background">
                   <div className="bg-blue-50 rounded-xl p-4 mb-6">
                     <div className="flex items-center gap-2 text-sm text-blue-900 mb-2">
@@ -296,16 +340,18 @@ const Index = () => {
                     <div className="text-sm text-blue-800">Ready for Enterprise upgrade</div>
                   </div>
                 </div>
-              </Card>
-            </div>
-            <div className="space-y-6 order-1 md:order-2">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                Grow Your Business
+              </ParallaxCard>
+            </ScrollReveal>
+            <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                <span className="gradient-text">Grow Your</span>
+                <br />
+                <span className="text-foreground">Business</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Find the accounts that are ready to expand and act quickly.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -325,32 +371,54 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="container mx-auto px-6 py-20 md:py-32">
-        <Card className="max-w-4xl mx-auto p-12 md:p-16 bg-gradient-to-br from-foreground to-foreground/90 rounded-3xl text-center space-y-8 shadow-2xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground leading-tight">
-            Ready to Save Your Customers?
-          </h2>
-          <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Every day you wait, you lose more revenue. Start preventing churn today—no credit card required.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap pt-4">
-            <Button size="lg" variant="secondary" className="text-base px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all">
-              Start Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="text-base px-8 py-6 rounded-full bg-transparent border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-              Talk to Sales
-            </Button>
+      <ScrollReveal>
+        <section className="container mx-auto px-6 py-20 md:py-32 relative">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-glow"></div>
+            <div className="w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl animate-glow" style={{ animationDelay: '-1.5s' }}></div>
           </div>
-          <p className="text-sm text-primary-foreground/60 pt-4">
-            14-day free trial • No credit card required • Cancel anytime
-          </p>
-        </Card>
-      </section>
+          <ParallaxCard className="max-w-4xl mx-auto p-12 md:p-16 bg-gradient-primary rounded-3xl text-center space-y-8 shadow-2xl hover:shadow-primary/50 card-3d relative overflow-hidden animate-gradient group">
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 animate-shimmer"></div>
+            </div>
+            <div className="relative">
+              <div className="flex items-center justify-center mb-4">
+                <Sparkles className="w-12 h-12 text-white animate-pulse" />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                Join the Pre-Launch Waitlist
+              </h2>
+              <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                Be among the first to experience Butter AI. Sign up now for exclusive early access and founding member benefits.
+              </p>
+              <div className="flex gap-4 justify-center flex-wrap pt-4">
+                <MagneticButton 
+                  size="lg" 
+                  className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center">
+                    Reserve Your Spot
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                </MagneticButton>
+              </div>
+              <p className="text-sm text-white/70 pt-4">
+                Limited spots available • No commitment required • Exclusive founding member pricing
+              </p>
+            </div>
+          </ParallaxCard>
+        </section>
+      </ScrollReveal>
 
       {/* Footer */}
-      <footer className="container mx-auto px-6 py-12 border-t border-border">
+      <footer className="container mx-auto px-6 py-12 border-t border-border/50">
         <div className="text-center text-sm text-muted-foreground">
-          <p>© 2025 Butter AI. All rights reserved.</p>
+          <p className="flex items-center justify-center gap-2">
+            Made with <Sparkles className="w-4 h-4 text-primary animate-pulse" /> by <span className="gradient-text font-semibold">Butter AI</span>
+          </p>
+          <p className="mt-2">© 2025 Butter AI. All rights reserved.</p>
         </div>
       </footer>
     </div>
