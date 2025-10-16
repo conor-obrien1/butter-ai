@@ -34,12 +34,6 @@ const Index = () => {
             </div>
             <span className="text-xl font-bold gradient-text">Butter AI</span>
           </div>
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a>
-            <a href="#how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">How It Works</a>
-            <a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
-          </div>
           <div className="flex items-center gap-4">
             <MagneticButton className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient">
               Join Waitlist
@@ -104,8 +98,8 @@ const Index = () => {
                   <div className="flex items-center justify-center mb-3">
                     <TrendingUp className="w-8 h-8 text-secondary animate-pulse" />
                   </div>
-                  <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">3x ROI</div>
-                  <p className="text-muted-foreground">Return on investment from retention vs acquisition</p>
+                  <div className="text-4xl font-bold mb-2 gradient-text group-hover:scale-110 transition-transform">80%</div>
+                  <p className="text-muted-foreground">Growth comes from keeping your current customers happy</p>
                 </div>
               </ParallaxCard>
             </ScrollReveal>
@@ -126,509 +120,279 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="container mx-auto px-6 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto space-y-32">
-          {/* Feature 1: Identify */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <ScrollReveal className="order-2 md:order-1">
-              <ParallaxCard className="p-0 glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20 card-3d relative group">
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-                <div className="p-8 bg-background">
-                  <div className="grid grid-cols-3 gap-4 mb-8">
-                    <div className="bg-card border-l-4 border-red-500 rounded-xl p-6">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <div className="text-sm font-semibold text-foreground mb-1">At-Risk Customers</div>
-                          <div className="text-xs text-muted-foreground">Needs immediate attention</div>
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
-                          <Target className="w-5 h-5 text-red-600" />
-                        </div>
-                      </div>
-                      <div className="text-3xl font-bold mb-2">26</div>
-                      <div className="text-xs text-red-600 font-medium">Take action →</div>
-                    </div>
-                    <div className="bg-card border-l-4 border-green-500 rounded-xl p-6">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <div className="text-sm font-semibold text-foreground mb-1">Stable Customers</div>
-                          <div className="text-xs text-muted-foreground">No action needed</div>
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                          <Shield className="w-5 h-5 text-green-600" />
-                        </div>
-                      </div>
-                      <div className="text-3xl font-bold mb-2">24</div>
-                      <div className="text-xs text-green-600 font-medium">Monitor →</div>
-                    </div>
-                    <div className="bg-card border-l-4 border-blue-500 rounded-xl p-6">
-                      <div className="flex items-start justify-between mb-2">
-                        <div>
-                          <div className="text-sm font-semibold text-foreground mb-1">Upsell Opportunities</div>
-                          <div className="text-xs text-muted-foreground">High-potential customers</div>
-                        </div>
-                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                          <TrendingUp className="w-5 h-5 text-blue-600" />
-                        </div>
-                      </div>
-                      <div className="text-3xl font-bold mb-2">7</div>
-                      <div className="text-xs text-blue-600 font-medium">Capture revenue →</div>
-                    </div>
-                  </div>
-                  <div className="border border-border rounded-xl p-4 bg-card">
-                    <div className="text-xs font-semibold text-muted-foreground mb-4">CUSTOMER OVERVIEW</div>
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-4 text-xs">
-                        <div className="flex-1 font-medium text-foreground">Contact 38 • Initech</div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
-                            <div className="w-1/5 h-full bg-red-500"></div>
-                          </div>
-                          <span className="text-muted-foreground">2</span>
-                        </div>
-                        <span className="text-red-600 font-semibold">Critical</span>
-                        <span className="text-muted-foreground">Multiple support tickets</span>
-                      </div>
-                      <div className="flex items-center gap-4 text-xs">
-                        <div className="flex-1 font-medium text-foreground">Contact 7 • Hooli</div>
-                        <div className="flex items-center gap-2">
-                          <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
-                            <div className="w-1/4 h-full bg-red-500"></div>
-                          </div>
-                          <span className="text-muted-foreground">7</span>
-                        </div>
-                        <span className="text-red-600 font-semibold">Critical</span>
-                        <span className="text-muted-foreground">Payment issues</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ParallaxCard>
-            </ScrollReveal>
-            <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Spot Which Customers</span>
+      <section className="container mx-auto px-6 py-20 md:py-32 relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <ScrollReveal>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="gradient-text">Your Complete Customer</span>
                 <br />
-                <span className="text-foreground">Are At Risk</span>
+                <span className="text-foreground">Success Platform</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Identify the signals of churn and intervene before it is too late.
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                From identifying risk to driving growth, everything you need in one place
               </p>
             </ScrollReveal>
           </div>
 
-          {/* Feature 2: Retain */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <ScrollReveal className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Keep Your</span>
-                <br />
-                <span className="text-foreground">Customers</span>
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Learn why your customer is at risk and how you should act to keep them.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
-                <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-              <div className="p-8 bg-background">
-                <div className="grid grid-cols-3 gap-6 mb-6">
-                  <div className="col-span-1">
-                    <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score</div>
-                    <div className="flex items-center gap-2">
-                      <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
-                        <div className="w-1/12 h-full bg-red-500"></div>
+          {/* Connecting line visualization */}
+          <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-[600px] bg-gradient-to-b from-transparent via-primary/20 to-transparent pointer-events-none"></div>
+
+          {/* Feature 1: Identify - Large Left */}
+          <div className="relative mb-32">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              <ScrollReveal className="lg:col-span-7 relative">
+                <div className="absolute -top-12 -left-12 w-24 h-24 bg-primary/5 rounded-full blur-2xl animate-glow"></div>
+                <ParallaxCard className="p-0 glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20 card-3d relative group transform lg:scale-105">
+                  <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                  <div className="p-8 bg-background">
+                    <div className="grid grid-cols-3 gap-4 mb-8">
+                      <div className="bg-card border-l-4 border-red-500 rounded-xl p-6">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <div className="text-sm font-semibold text-foreground mb-1">At-Risk Customers</div>
+                            <div className="text-xs text-muted-foreground">Needs immediate attention</div>
+                          </div>
+                          <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+                            <Target className="w-5 h-5 text-red-600" />
+                          </div>
+                        </div>
+                        <div className="text-3xl font-bold mb-2">26</div>
+                        <div className="text-xs text-red-600 font-medium">Take action →</div>
                       </div>
-                      <span className="text-2xl font-bold text-red-600">1</span>
-                    </div>
-                    <div className="mt-2 text-xs text-muted-foreground">Previous: 0</div>
-                  </div>
-                  <div className="col-span-2 bg-red-50 rounded-xl p-4">
-                    <div className="text-xs font-semibold text-red-900 mb-2">Risk Analysis</div>
-                    <div className="text-sm text-red-800">Contact 49 from Wayne Enterprises is <span className="font-bold">at critical risk of churning</span></div>
-                    <div className="mt-3">
-                      <div className="text-xs font-semibold text-red-900 mb-1">Primary Reason:</div>
-                      <div className="text-sm text-red-800">Payment issues</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-blue-50 rounded-xl p-4 mb-6">
-                  <div className="text-xs font-semibold text-blue-900 mb-3">Recommended Actions</div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-blue-800">
-                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">1</span>
-                      <span>Schedule an urgent check-in call</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-blue-800">
-                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">2</span>
-                      <span>Send gift card for feedback</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-blue-800">
-                      <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">3</span>
-                      <span>Create custom success plan</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="border border-border rounded-xl p-4 bg-card">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-xs font-semibold text-foreground">Action Plans</div>
-                    <Button size="sm" className="h-7 text-xs rounded-full">+ New Plan</Button>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="text-xs">
-                      <div className="font-semibold text-foreground mb-1">Billing discussion</div>
-                      <div className="text-muted-foreground mb-2">Contact to discuss payment options and potential plan adjustments</div>
-                      <div className="flex gap-2">
-                        <Button size="sm" variant="ghost" className="h-6 text-xs text-blue-600">Start</Button>
-                        <Button size="sm" variant="ghost" className="h-6 text-xs text-green-600">Complete</Button>
+                      <div className="bg-card border-l-4 border-green-500 rounded-xl p-6">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <div className="text-sm font-semibold text-foreground mb-1">Stable Customers</div>
+                            <div className="text-xs text-muted-foreground">No action needed</div>
+                          </div>
+                          <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                            <Shield className="w-5 h-5 text-green-600" />
+                          </div>
+                        </div>
+                        <div className="text-3xl font-bold mb-2">24</div>
+                        <div className="text-xs text-green-600 font-medium">Monitor →</div>
+                      </div>
+                      <div className="bg-card border-l-4 border-blue-500 rounded-xl p-6">
+                        <div className="flex items-start justify-between mb-2">
+                          <div>
+                            <div className="text-sm font-semibold text-foreground mb-1">Upsell Opportunities</div>
+                            <div className="text-xs text-muted-foreground">High-potential customers</div>
+                          </div>
+                          <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                            <TrendingUp className="w-5 h-5 text-blue-600" />
+                          </div>
+                        </div>
+                        <div className="text-3xl font-bold mb-2">7</div>
+                        <div className="text-xs text-blue-600 font-medium">Capture revenue →</div>
                       </div>
                     </div>
+                    <div className="border border-border rounded-xl p-4 bg-card">
+                      <div className="text-xs font-semibold text-muted-foreground mb-4">CUSTOMER OVERVIEW</div>
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-4 text-xs">
+                          <div className="flex-1 font-medium text-foreground">Contact 38 • Initech</div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
+                              <div className="w-1/5 h-full bg-red-500"></div>
+                            </div>
+                            <span className="text-muted-foreground">2</span>
+                          </div>
+                          <span className="text-red-600 font-semibold">Critical</span>
+                          <span className="text-muted-foreground">Multiple support tickets</span>
+                        </div>
+                        <div className="flex items-center gap-4 text-xs">
+                          <div className="flex-1 font-medium text-foreground">Contact 7 • Hooli</div>
+                          <div className="flex items-center gap-2">
+                            <div className="w-24 h-2 bg-border rounded-full overflow-hidden">
+                              <div className="w-1/4 h-full bg-red-500"></div>
+                            </div>
+                            <span className="text-muted-foreground">7</span>
+                          </div>
+                          <span className="text-red-600 font-semibold">Critical</span>
+                          <span className="text-muted-foreground">Payment issues</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </ParallaxCard>
+              </ScrollReveal>
+              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-primary/20">
+                  <Target className="w-4 h-4 text-primary" />
+                  <span className="font-semibold gradient-text">Churn Analysis</span>
                 </div>
-              </div>
-              </ParallaxCard>
-            </ScrollReveal>
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                  <span className="gradient-text">See Where Customers</span>
+                  <br />
+                  <span className="text-foreground">Are Slipping</span>
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Uncover hidden churn risks by connecting your tools and data to find where revenue is silently leaking.
+                </p>
+              </ScrollReveal>
+            </div>
           </div>
 
-          {/* Feature 3: Grow */}
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <ScrollReveal className="order-2 md:order-1">
-              <ParallaxCard className="p-0 glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20 card-3d relative group">
-                <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-                <div className="p-8 bg-background">
-                  <div className="bg-blue-50 rounded-xl p-4 mb-6">
-                    <div className="flex items-center gap-2 text-sm text-blue-900 mb-2">
-                      <TrendingUp className="w-5 h-5 text-blue-600" />
-                      <span className="font-semibold">This customer shows high potential for an upsell from <span className="text-blue-600">Pro</span> to <span className="text-blue-600">Enterprise</span>.</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-border">
-                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-xl font-bold">C32</div>
-                    <div>
-                      <div className="text-lg font-semibold text-foreground">Contact 32</div>
-                      <div className="text-sm text-muted-foreground">Initech</div>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-card border border-border rounded-xl p-4">
-                      <div className="text-xs font-semibold text-muted-foreground mb-2">Current Tier:</div>
-                      <div className="text-xl font-bold text-foreground mb-1">Pro</div>
-                      <div className="text-xs text-blue-600 font-medium">Upgrade to: Enterprise</div>
-                    </div>
-                    <div className="bg-card border border-border rounded-xl p-4">
-                      <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score:</div>
-                      <div className="flex items-center gap-2">
-                        <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
-                          <div className="w-4/5 h-full bg-green-500"></div>
-                        </div>
-                        <span className="text-xl font-bold text-green-600">79</span>
-                      </div>
-                    </div>
-                    <div className="bg-card border border-border rounded-xl p-4">
-                      <div className="text-xs font-semibold text-muted-foreground mb-2">Current Revenue:</div>
-                      <div className="text-xl font-bold text-foreground">$5,301</div>
-                    </div>
-                    <div className="bg-card border border-border rounded-xl p-4">
-                      <div className="text-xs font-semibold text-muted-foreground mb-2">Potential Revenue:</div>
-                      <div className="text-xl font-bold text-green-600">$10,602</div>
-                      <div className="text-xs text-green-600 flex items-center gap-1">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>+100%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-blue-50 rounded-xl p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="w-5 h-5 text-blue-600" />
-                      <span className="text-sm font-semibold text-blue-900">Upsell Opportunity</span>
-                    </div>
-                    <div className="text-sm text-blue-800">Ready for Enterprise upgrade</div>
-                  </div>
+          {/* Feature 2: Retain - Small Right with Overlap */}
+          <div className="relative mb-32">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1">
+                <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-secondary/20">
+                  <Shield className="w-4 h-4 text-secondary" />
+                  <span className="font-semibold gradient-text">AI Triage</span>
                 </div>
-              </ParallaxCard>
-            </ScrollReveal>
-            <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Grow Your</span>
-                <br />
-                <span className="text-foreground">Business</span>
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Find the accounts that are ready to expand and act quickly.
-              </p>
-            </ScrollReveal>
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                  <span className="gradient-text">Focus Where It</span>
+                  <br />
+                  <span className="text-foreground">Matters Most</span>
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Know the next 10 actions that will move the needle this week, so you can spend time where it truly counts.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal className="lg:col-span-7 relative order-1 lg:order-2" delay={200}>
+                <div className="absolute -top-12 -right-12 w-24 h-24 bg-secondary/5 rounded-full blur-2xl animate-glow" style={{ animationDelay: '-1s' }}></div>
+                <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group transform lg:-translate-x-12">
+                  <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                  <div className="p-8 bg-background">
+                    <div className="grid grid-cols-3 gap-6 mb-6">
+                      <div className="col-span-1">
+                        <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score</div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
+                            <div className="w-1/12 h-full bg-red-500"></div>
+                          </div>
+                          <span className="text-2xl font-bold text-red-600">1</span>
+                        </div>
+                        <div className="mt-2 text-xs text-muted-foreground">Previous: 0</div>
+                      </div>
+                      <div className="col-span-2 bg-red-50 rounded-xl p-4">
+                        <div className="text-xs font-semibold text-red-900 mb-2">Risk Analysis</div>
+                        <div className="text-sm text-red-800">Contact 49 from Wayne Enterprises is <span className="font-bold">at critical risk of churning</span></div>
+                        <div className="mt-3">
+                          <div className="text-xs font-semibold text-red-900 mb-1">Primary Reason:</div>
+                          <div className="text-sm text-red-800">Payment issues</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-xl p-4 mb-6">
+                      <div className="text-xs font-semibold text-blue-900 mb-3">Recommended Actions</div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 text-sm text-blue-800">
+                          <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">1</span>
+                          <span>Schedule an urgent check-in call</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-blue-800">
+                          <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">2</span>
+                          <span>Send gift card for feedback</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-blue-800">
+                          <span className="w-5 h-5 rounded-full bg-blue-200 flex items-center justify-center text-xs font-bold">3</span>
+                          <span>Create custom success plan</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="border border-border rounded-xl p-4 bg-card">
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="text-xs font-semibold text-foreground">Action Plans</div>
+                        <Button size="sm" className="h-7 text-xs rounded-full">+ New Plan</Button>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="text-xs">
+                          <div className="font-semibold text-foreground mb-1">Billing discussion</div>
+                          <div className="text-muted-foreground mb-2">Contact to discuss payment options and potential plan adjustments</div>
+                          <div className="flex gap-2">
+                            <Button size="sm" variant="ghost" className="h-6 text-xs text-blue-600">Start</Button>
+                            <Button size="sm" variant="ghost" className="h-6 text-xs text-green-600">Complete</Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+            </div>
+          </div>
+
+          {/* Feature 3: Grow - Medium Center */}
+          <div className="relative">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              <ScrollReveal className="lg:col-span-6 lg:col-start-2 relative">
+                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-32 h-32 bg-accent/5 rounded-full blur-2xl animate-glow" style={{ animationDelay: '-2s' }}></div>
+                <ParallaxCard className="p-0 glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20 card-3d relative group">
+                  <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
+                  <div className="p-8 bg-background">
+                    <div className="bg-blue-50 rounded-xl p-4 mb-6">
+                      <div className="flex items-center gap-2 text-sm text-blue-900 mb-2">
+                        <TrendingUp className="w-5 h-5 text-blue-600" />
+                        <span className="font-semibold">This customer shows high potential for an upsell from <span className="text-blue-600">Pro</span> to <span className="text-blue-600">Enterprise</span>.</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4 mb-6 pb-6 border-b border-border">
+                      <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center text-xl font-bold">C32</div>
+                      <div>
+                        <div className="text-lg font-semibold text-foreground">Contact 32</div>
+                        <div className="text-sm text-muted-foreground">Initech</div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="bg-card border border-border rounded-xl p-4">
+                        <div className="text-xs font-semibold text-muted-foreground mb-2">Current Tier:</div>
+                        <div className="text-xl font-bold text-foreground mb-1">Pro</div>
+                        <div className="text-xs text-blue-600 font-medium">Upgrade to: Enterprise</div>
+                      </div>
+                      <div className="bg-card border border-border rounded-xl p-4">
+                        <div className="text-xs font-semibold text-muted-foreground mb-2">Health Score:</div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-2 bg-border rounded-full overflow-hidden">
+                            <div className="w-4/5 h-full bg-green-500"></div>
+                          </div>
+                          <span className="text-xl font-bold text-green-600">79</span>
+                        </div>
+                      </div>
+                      <div className="bg-card border border-border rounded-xl p-4">
+                        <div className="text-xs font-semibold text-muted-foreground mb-2">Current Revenue:</div>
+                        <div className="text-xl font-bold text-foreground">$5,301</div>
+                      </div>
+                      <div className="bg-card border border-border rounded-xl p-4">
+                        <div className="text-xs font-semibold text-muted-foreground mb-2">Potential Revenue:</div>
+                        <div className="text-xl font-bold text-green-600">$10,602</div>
+                        <div className="text-xs text-green-600 flex items-center gap-1">
+                          <TrendingUp className="w-3 h-3" />
+                          <span>+100%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <TrendingUp className="w-5 h-5 text-blue-600" />
+                        <span className="text-sm font-semibold text-blue-900">Upsell Opportunity</span>
+                      </div>
+                      <div className="text-sm text-blue-800">Ready for Enterprise upgrade</div>
+                    </div>
+                  </div>
+                </ParallaxCard>
+              </ScrollReveal>
+              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-accent/20">
+                  <TrendingUp className="w-4 h-4 text-primary" />
+                  <span className="font-semibold gradient-text">AI Automation</span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
+                  <span className="gradient-text">Let AI Handle</span>
+                  <br />
+                  <span className="text-foreground">Customer Success</span>
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Automatically draft messages, follow-ups, and success check-ins, your AI teammate that helps retain customers before you can hire a team.
+                </p>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* How It Works Section */}
-      <ScrollReveal>
-        <section id="how-it-works" className="container mx-auto px-6 py-20 md:py-32 relative">
-          <div className="max-w-4xl mx-auto text-center space-y-12">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold">
-                <span className="gradient-text">How It Works</span>
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Three simple steps to revolutionize your customer retention
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <ScrollReveal delay={0}>
-                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
-                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                    1
-                  </div>
-                  <div className="mt-4 space-y-4">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                      <Target className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold">Connect Your Data</h3>
-                    <p className="text-muted-foreground">
-                      Seamlessly integrate with your CRM, billing, and support tools. Our AI starts learning from day one.
-                    </p>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
-                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                    2
-                  </div>
-                  <div className="mt-4 space-y-4">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                      <Zap className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold">Get AI Insights</h3>
-                    <p className="text-muted-foreground">
-                      Our AI analyzes patterns, predicts churn risk, and identifies upsell opportunities in real-time.
-                    </p>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <ParallaxCard className="p-8 glass border-2 border-primary/20 rounded-3xl hover-lift relative group">
-                  <div className="absolute -top-4 left-8 w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                    3
-                  </div>
-                  <div className="mt-4 space-y-4">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                      <TrendingUp className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-bold">Take Action</h3>
-                    <p className="text-muted-foreground">
-                      Get personalized action plans and automated workflows to retain customers and grow revenue.
-                    </p>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* Pricing Section */}
-      <ScrollReveal>
-        <section id="pricing" className="container mx-auto px-6 py-20 md:py-32">
-          <div className="max-w-6xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold">
-                <span className="gradient-text">Founding Member Pricing</span>
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Lock in exclusive lifetime discounts by joining early
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <ScrollReveal delay={0}>
-                <ParallaxCard className="p-8 glass border-2 border-border rounded-3xl hover-lift">
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">Starter</h3>
-                      <p className="text-muted-foreground">Perfect for small teams</p>
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold gradient-text">$99</div>
-                      <div className="text-muted-foreground">/month</div>
-                      <div className="text-sm text-primary mt-1">Regular: $149/mo</div>
-                    </div>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Up to 500 customers</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Basic AI insights</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Email support</span>
-                      </li>
-                    </ul>
-                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
-                      Reserve Spot
-                    </MagneticButton>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-
-              <ScrollReveal delay={100}>
-                <ParallaxCard className="p-8 glass border-2 border-primary/40 rounded-3xl hover-lift relative">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-primary rounded-full text-xs font-bold text-white">
-                    MOST POPULAR
-                  </div>
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">Growth</h3>
-                      <p className="text-muted-foreground">For scaling businesses</p>
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold gradient-text">$299</div>
-                      <div className="text-muted-foreground">/month</div>
-                      <div className="text-sm text-primary mt-1">Regular: $449/mo</div>
-                    </div>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Up to 2,500 customers</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Advanced AI predictions</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Priority support</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Custom integrations</span>
-                      </li>
-                    </ul>
-                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
-                      Reserve Spot
-                    </MagneticButton>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <ParallaxCard className="p-8 glass border-2 border-border rounded-3xl hover-lift">
-                  <div className="space-y-6">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
-                      <p className="text-muted-foreground">For large organizations</p>
-                    </div>
-                    <div>
-                      <div className="text-4xl font-bold gradient-text">Custom</div>
-                      <div className="text-muted-foreground">Let's talk</div>
-                    </div>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Unlimited customers</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">White-label options</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Dedicated success manager</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
-                        </div>
-                        <span className="text-sm">Custom AI training</span>
-                      </li>
-                    </ul>
-                    <MagneticButton variant="outline" className="w-full border-2 rounded-full py-3">
-                      Contact Sales
-                    </MagneticButton>
-                  </div>
-                </ParallaxCard>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
-
-      {/* FAQ Section */}
-      <ScrollReveal>
-        <section id="faq" className="container mx-auto px-6 py-20 md:py-32">
-          <div className="max-w-3xl mx-auto space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold">
-                <span className="gradient-text">Frequently Asked</span> Questions
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
-                <h3 className="font-bold text-lg mb-2">When will Butter AI launch?</h3>
-                <p className="text-muted-foreground">
-                  We're planning to launch in Q2 2025. Waitlist members will get early access and exclusive founding member pricing.
-                </p>
-              </ParallaxCard>
-
-              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
-                <h3 className="font-bold text-lg mb-2">What integrations do you support?</h3>
-                <p className="text-muted-foreground">
-                  We'll launch with support for major CRMs (Salesforce, HubSpot), billing platforms (Stripe, Chargebee), and support tools (Zendesk, Intercom). Custom integrations available for Enterprise.
-                </p>
-              </ParallaxCard>
-
-              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
-                <h3 className="font-bold text-lg mb-2">How does the AI work?</h3>
-                <p className="text-muted-foreground">
-                  Our AI analyzes customer behavior patterns, engagement metrics, support tickets, and billing data to predict churn risk and identify growth opportunities with 95% accuracy.
-                </p>
-              </ParallaxCard>
-
-              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
-                <h3 className="font-bold text-lg mb-2">Is my data secure?</h3>
-                <p className="text-muted-foreground">
-                  Absolutely. We use enterprise-grade encryption, SOC 2 compliance, and never share your data with third parties. Your customer data stays yours.
-                </p>
-              </ParallaxCard>
-
-              <ParallaxCard className="p-6 glass border border-border rounded-2xl hover-lift">
-                <h3 className="font-bold text-lg mb-2">What makes Butter AI different?</h3>
-                <p className="text-muted-foreground">
-                  Unlike traditional analytics tools, our AI doesn't just show you data—it tells you exactly what to do and automates the retention workflows for you.
-                </p>
-              </ParallaxCard>
-            </div>
-          </div>
-        </section>
-      </ScrollReveal>
 
       {/* Social Proof */}
       <section className="container mx-auto px-6 py-20">
@@ -688,56 +452,11 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="container mx-auto px-6 py-12 border-t border-border/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-primary" />
-                <span className="font-bold gradient-text">Butter AI</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                AI-powered customer retention that actually works.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#features" className="hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#how-it-works" className="hover:text-foreground transition-colors">How It Works</a></li>
-                <li><a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#faq" className="hover:text-foreground transition-colors">FAQ</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Documentation</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Privacy</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2025 Butter AI. All rights reserved.
-            </p>
-            <div className="flex items-center gap-2">
-              <p className="text-sm text-muted-foreground">Made with</p>
-              <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <p className="text-sm text-muted-foreground">by the Butter team</p>
-            </div>
-          </div>
+        <div className="text-center text-sm text-muted-foreground">
+          <p className="flex items-center justify-center gap-2">
+            Made with <Sparkles className="w-4 h-4 text-primary animate-pulse" /> by <span className="gradient-text font-semibold">Butter AI</span>
+          </p>
+          <p className="mt-2">© 2025 Butter AI. All rights reserved.</p>
         </div>
       </footer>
     </div>
