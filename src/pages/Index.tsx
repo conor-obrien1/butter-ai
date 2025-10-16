@@ -232,7 +232,7 @@ const Index = () => {
                 <br />
                 <span className="text-foreground">Into Actions</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Cut through the noise and know exactly what</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Cut through the noise and know exactly which customers and tasks will move the needle this week.</p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
@@ -355,13 +355,11 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Grow Your</span>
+                <span className="gradient-text">Let Butter </span>
                 <br />
-                <span className="text-foreground">Business</span>
+                <span className="text-foreground">Work For You</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Find the accounts that are ready to expand and act quickly.
-              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Butter acts like your first Customer Success Manager — automatically writing outreach, renewal nudges, and personalized check-ins so you can retain customers and grow while staying lean.</p>
             </ScrollReveal>
           </div>
         </div>
