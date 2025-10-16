@@ -218,12 +218,12 @@ const Index = () => {
                   </div>
                 </ParallaxCard>
               </ScrollReveal>
-              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
+              <ScrollReveal className="lg:col-span-5 space-y-6 text-center" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-primary/20">
                   <Target className="w-4 h-4 text-primary" />
                   <span className="font-semibold gradient-text">Churn Analysis</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
                   <span className="gradient-text">See Where Customers</span>
                   <br />
                   <span className="text-foreground">Are Slipping</span>
@@ -231,26 +231,6 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Uncover hidden churn risks by connecting your tools and data to find where revenue is silently leaking.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Zap className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Connect all your tools and data sources</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Zap className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Detect silent revenue leaks</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Zap className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Real-time churn risk visibility</span>
-                  </li>
-                </ul>
               </ScrollReveal>
             </div>
           </div>
@@ -258,12 +238,12 @@ const Index = () => {
           {/* Feature 2: Retain - Small Right with Overlap */}
           <div className="relative mb-32">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
-              <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1">
+              <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1 text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-secondary/20">
                   <Shield className="w-4 h-4 text-secondary" />
                   <span className="font-semibold gradient-text">AI Triage</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
                   <span className="gradient-text">Focus Where It</span>
                   <br />
                   <span className="text-foreground">Matters Most</span>
@@ -271,26 +251,6 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Know the next 10 actions that will move the needle this week, so you can spend time where it truly counts.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Shield className="w-4 h-4 text-secondary" />
-                    </div>
-                    <span className="text-muted-foreground">Prioritized action list</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Shield className="w-4 h-4 text-secondary" />
-                    </div>
-                    <span className="text-muted-foreground">Weekly impact recommendations</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Shield className="w-4 h-4 text-secondary" />
-                    </div>
-                    <span className="text-muted-foreground">Smart resource allocation</span>
-                  </li>
-                </ul>
               </ScrollReveal>
               <ScrollReveal className="lg:col-span-7 relative order-1 lg:order-2" delay={200}>
                 <div className="absolute -top-12 -right-12 w-24 h-24 bg-secondary/5 rounded-full blur-2xl animate-glow" style={{ animationDelay: '-1s' }}></div>
@@ -415,12 +375,12 @@ const Index = () => {
                   </div>
                 </ParallaxCard>
               </ScrollReveal>
-              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
+              <ScrollReveal className="lg:col-span-5 space-y-6 text-center" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-accent/20">
                   <TrendingUp className="w-4 h-4 text-primary" />
                   <span className="font-semibold gradient-text">AI Automation</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                <h3 className="text-4xl md:text-5xl font-bold leading-tight">
                   <span className="gradient-text">Let AI Handle</span>
                   <br />
                   <span className="text-foreground">Customer Success</span>
@@ -428,26 +388,6 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Automatically draft messages, follow-ups, and success check-ins, your AI teammate that helps retain customers before you can hire a team.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <TrendingUp className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Automated message drafting</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <TrendingUp className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Smart follow-up sequences</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <TrendingUp className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-muted-foreground">Success check-ins on autopilot</span>
-                  </li>
-                </ul>
               </ScrollReveal>
             </div>
           </div>
