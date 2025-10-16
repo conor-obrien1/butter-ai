@@ -224,7 +224,7 @@ const Index = () => {
                   <span className="font-semibold gradient-text">Identify</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  <span className="gradient-text">Spot Which Customers</span>
+                  <span className="gradient-text">See Where Customers</span>
                   <br />
                   <span className="text-foreground">Are At Risk</span>
                 </h3>
