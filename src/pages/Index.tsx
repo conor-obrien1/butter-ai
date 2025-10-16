@@ -5,17 +5,19 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxCard } from "@/components/ParallaxCard";
 import { useEffect, useState } from "react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
+  return <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
       
       {/* Animated background orbs */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '-3s' }}></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '-3s'
+      }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-glow"></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '-1.5s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl animate-float" style={{
+        animationDelay: '-1.5s'
+      }}></div>
         
         {/* Animated gradient mesh overlay */}
         <div className="absolute inset-0 opacity-30">
@@ -30,7 +32,9 @@ const Index = () => {
             <div className="relative">
               <Sparkles className="w-6 h-6 text-primary animate-pulse" />
               <div className="absolute inset-0 blur-md bg-primary/50 animate-glow"></div>
-              <div className="absolute inset-0 blur-xl bg-secondary/30 animate-glow" style={{ animationDelay: '-1.5s' }}></div>
+              <div className="absolute inset-0 blur-xl bg-secondary/30 animate-glow" style={{
+              animationDelay: '-1.5s'
+            }}></div>
             </div>
             <span className="text-xl font-bold gradient-text">Butter AI</span>
           </div>
@@ -55,19 +59,22 @@ const Index = () => {
             <Zap className="w-4 h-4 text-primary animate-pulse" />
             <span>Coming Soon • Pre-Launch Access</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight animate-slide-up" style={{
+          animationDelay: '0.1s'
+        }}>
             <span className="gradient-text">Stop Losing Customers.</span>
             <br />
             <span className="text-foreground">Start Growing Revenue.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{
+          animationDelay: '0.2s'
+        }}>
             Join the waitlist for early access. Be among the first to identify at-risk customers and prevent churn before it happens.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <MagneticButton 
-              size="lg" 
-              className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden"
-            >
+          <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{
+          animationDelay: '0.3s'
+        }}>
+            <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden">
               <span className="relative z-10 flex items-center">
                 Get Early Access
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -75,7 +82,9 @@ const Index = () => {
               <div className="absolute inset-0 animate-shimmer"></div>
             </MagneticButton>
           </div>
-          <p className="text-sm text-muted-foreground pt-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+          <p className="text-sm text-muted-foreground pt-4 animate-slide-up" style={{
+          animationDelay: '0.4s'
+        }}>
             Be the first to know when we launch • Exclusive founding member benefits
           </p>
         </div>
@@ -207,13 +216,11 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Spot Which Customers</span>
+                <span className="gradient-text">See Where</span>
                 <br />
-                <span className="text-foreground">Are At Risk</span>
+                <span className="text-amber-500">Customers Are Slipping</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Identify the signals of churn and intervene before it is too late.
-              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Uncover hidden churn risks by connecting all your tools and data find where revenue is silently leaking.</p>
             </ScrollReveal>
           </div>
 
@@ -221,13 +228,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Keep Your</span>
+                <span className="gradient-text">Focus</span>
                 <br />
-                <span className="text-foreground">Customers</span>
+                <span className="text-foreground">Where It Matters Most</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Learn why your customer is at risk and how you should act to keep them.
-              </p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Know the next 10 actions that will move the needle this week, so you can spend time where it truly counts.</p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
@@ -649,7 +654,9 @@ const Index = () => {
         <section className="container mx-auto px-6 py-20 md:py-32 relative">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-glow"></div>
-            <div className="w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl animate-glow" style={{ animationDelay: '-1.5s' }}></div>
+            <div className="w-[400px] h-[400px] bg-secondary/10 rounded-full blur-3xl animate-glow" style={{
+            animationDelay: '-1.5s'
+          }}></div>
           </div>
           <ParallaxCard className="max-w-4xl mx-auto p-12 md:p-16 bg-gradient-primary rounded-3xl text-center space-y-8 shadow-2xl hover:shadow-primary/50 card-3d relative overflow-hidden animate-gradient group">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
@@ -667,10 +674,7 @@ const Index = () => {
                 Be among the first to experience Butter AI. Sign up now for exclusive early access and founding member benefits.
               </p>
               <div className="flex gap-4 justify-center flex-wrap pt-4">
-                <MagneticButton 
-                  size="lg" 
-                  className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden"
-                >
+                <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden">
                   <span className="relative z-10 flex items-center">
                     Reserve Your Spot
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -740,8 +744,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
