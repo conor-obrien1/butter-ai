@@ -218,7 +218,7 @@ const Index = () => {
                   </div>
                 </ParallaxCard>
               </ScrollReveal>
-              <ScrollReveal className="lg:col-span-5 space-y-6 text-center" delay={200}>
+              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-primary/20">
                   <Target className="w-4 h-4 text-primary" />
                   <span className="font-semibold gradient-text">Churn Analysis</span>
@@ -238,7 +238,7 @@ const Index = () => {
           {/* Feature 2: Retain - Small Right with Overlap */}
           <div className="relative mb-32">
             <div className="grid lg:grid-cols-12 gap-8 items-center">
-              <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+              <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-secondary/20">
                   <Shield className="w-4 h-4 text-secondary" />
                   <span className="font-semibold gradient-text">AI Triage</span>
@@ -375,7 +375,7 @@ const Index = () => {
                   </div>
                 </ParallaxCard>
               </ScrollReveal>
-              <ScrollReveal className="lg:col-span-5 space-y-6 text-center" delay={200}>
+              <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-accent/20">
                   <TrendingUp className="w-4 h-4 text-primary" />
                   <span className="font-semibold gradient-text">AI Automation</span>
