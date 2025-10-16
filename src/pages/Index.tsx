@@ -218,7 +218,7 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
                 <span className="gradient-text">See Where</span>
                 <br />
-                <span className="text-amber-500">Customers Are Slipping</span>
+                <span className="text-stone-950">Customers Are Slipping</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">Uncover hidden churn risks by connecting all your tools and data find where revenue is silently leaking.</p>
             </ScrollReveal>
@@ -228,11 +228,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Focus</span>
+                <span className="gradient-text">Turn Insights</span>
                 <br />
-                <span className="text-foreground">Where It Matters Most</span>
+                <span className="text-foreground">Into Actions</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Know the next 10 actions that will move the needle this week, so you can spend time where it truly counts.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Cut through the noise and know exactly what</p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
