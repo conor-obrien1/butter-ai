@@ -221,34 +221,34 @@ const Index = () => {
               <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-primary/20">
                   <Target className="w-4 h-4 text-primary" />
-                  <span className="font-semibold gradient-text">Identify</span>
+                  <span className="font-semibold gradient-text">Churn Analysis</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  <span className="gradient-text">Spot Which Customers</span>
+                  <span className="gradient-text">See Where Customers</span>
                   <br />
-                  <span className="text-foreground">Are At Risk</span>
+                  <span className="text-foreground">Are Slipping</span>
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Identify the signals of churn and intervene before it is too late. Our AI analyzes behavior patterns, engagement metrics, and support interactions to flag at-risk accounts automatically.
+                  Uncover hidden churn risks by connecting your tools and data to find where revenue is silently leaking.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Zap className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Real-time risk scoring</span>
+                    <span className="text-muted-foreground">Connect all your tools and data sources</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Zap className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Behavioral pattern detection</span>
+                    <span className="text-muted-foreground">Detect silent revenue leaks</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Zap className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Automated alerts & notifications</span>
+                    <span className="text-muted-foreground">Real-time churn risk visibility</span>
                   </li>
                 </ul>
               </ScrollReveal>
@@ -261,34 +261,34 @@ const Index = () => {
               <ScrollReveal className="lg:col-span-5 space-y-6 order-2 lg:order-1">
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-secondary/20">
                   <Shield className="w-4 h-4 text-secondary" />
-                  <span className="font-semibold gradient-text">Retain</span>
+                  <span className="font-semibold gradient-text">AI Triage</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  <span className="gradient-text">Keep Your</span>
+                  <span className="gradient-text">Focus Where It</span>
                   <br />
-                  <span className="text-foreground">Customers Happy</span>
+                  <span className="text-foreground">Matters Most</span>
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Learn why your customer is at risk and get AI-powered recommendations on how to act. Every insight comes with a specific, actionable plan you can execute immediately.
+                  Know the next 10 actions that will move the needle this week, so you can spend time where it truly counts.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Shield className="w-4 h-4 text-secondary" />
                     </div>
-                    <span className="text-muted-foreground">AI-generated action plans</span>
+                    <span className="text-muted-foreground">Prioritized action list</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Shield className="w-4 h-4 text-secondary" />
                     </div>
-                    <span className="text-muted-foreground">Root cause analysis</span>
+                    <span className="text-muted-foreground">Weekly impact recommendations</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Shield className="w-4 h-4 text-secondary" />
                     </div>
-                    <span className="text-muted-foreground">Track intervention outcomes</span>
+                    <span className="text-muted-foreground">Smart resource allocation</span>
                   </li>
                 </ul>
               </ScrollReveal>
@@ -418,34 +418,34 @@ const Index = () => {
               <ScrollReveal className="lg:col-span-5 space-y-6" delay={200}>
                 <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm border border-accent/20">
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="font-semibold gradient-text">Grow</span>
+                  <span className="font-semibold gradient-text">AI Automation</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold leading-tight">
-                  <span className="gradient-text">Grow Your</span>
+                  <span className="gradient-text">Let AI Handle</span>
                   <br />
-                  <span className="text-foreground">Business</span>
+                  <span className="text-foreground">Customer Success</span>
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Find the accounts that are ready to expand and act quickly. Identify expansion opportunities and optimize your revenue per customer with precision targeting.
+                  Automatically draft messages, follow-ups, and success check-ins, your AI teammate that helps retain customers before you can hire a team.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <TrendingUp className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Identify upsell opportunities</span>
+                    <span className="text-muted-foreground">Automated message drafting</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <TrendingUp className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Revenue expansion tracking</span>
+                    <span className="text-muted-foreground">Smart follow-up sequences</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <TrendingUp className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-muted-foreground">Perfect timing recommendations</span>
+                    <span className="text-muted-foreground">Success check-ins on autopilot</span>
                   </li>
                 </ul>
               </ScrollReveal>
