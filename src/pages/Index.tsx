@@ -5,7 +5,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxCard } from "@/components/ParallaxCard";
 import { useEffect, useState } from "react";
-import atRiskDashboard from "@/assets/at-risk-dashboard.jpg";
+// Image imports will be added once uploaded to src/assets
 const Index = () => {
   return <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
       
@@ -142,11 +142,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal className="order-2 md:order-1">
               <div className="glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20">
-                <img 
-                  src={atRiskDashboard} 
-                  alt="At-Risk Customers Dashboard showing customer health scores and risk analysis"
-                  className="w-full h-auto"
-                />
+                <div className="bg-muted/50 aspect-video flex items-center justify-center">
+                  <p className="text-muted-foreground text-center px-6">
+                    Upload at-risk-dashboard.jpg to src/assets/
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
