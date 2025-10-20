@@ -5,13 +5,6 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxCard } from "@/components/ParallaxCard";
 import { useEffect, useState } from "react";
-
-// Import screenshot images
-import atRiskDashboard from "@/assets/at-risk-dashboard.png";
-import customerEmma from "@/assets/customer-emma.png";
-import customerRobert from "@/assets/customer-robert.png";
-import howItWorksFlow from "@/assets/how-it-works-flow.png";
-import integrations from "@/assets/integrations.png";
 const Index = () => {
   return <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
       
@@ -148,11 +141,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal className="order-2 md:order-1">
               <div className="glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20">
-                <img 
-                  src={atRiskDashboard} 
-                  alt="At-Risk Customers Dashboard showing customer health scores and risk analysis"
-                  className="w-full h-auto"
-                />
+                <div className="w-full aspect-video bg-muted flex items-center justify-center p-8 text-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Add your screenshot:</p>
+                    <p className="font-mono text-sm">src/assets/at-risk-dashboard.png</p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
@@ -177,11 +171,12 @@ const Index = () => {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20">
-                <img 
-                  src={customerEmma} 
-                  alt="Customer health score analysis with recommended actions and risk assessment"
-                  className="w-full h-auto"
-                />
+                <div className="w-full aspect-video bg-muted flex items-center justify-center p-8 text-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Add your screenshot:</p>
+                    <p className="font-mono text-sm">src/assets/customer-emma.png</p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -190,11 +185,12 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <ScrollReveal className="order-2 md:order-1">
               <div className="glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20">
-                <img 
-                  src={customerRobert} 
-                  alt="Upsell opportunity analysis showing customer potential and revenue growth"
-                  className="w-full h-auto"
-                />
+                <div className="w-full aspect-video bg-muted flex items-center justify-center p-8 text-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Add your screenshot:</p>
+                    <p className="font-mono text-sm">src/assets/customer-robert.png</p>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
@@ -224,11 +220,12 @@ const Index = () => {
             
             <div className="mt-16">
               <div className="glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift">
-                <img 
-                  src={howItWorksFlow} 
-                  alt="How Butter AI works: Connect data, get AI insights, and take action"
-                  className="w-full h-auto"
-                />
+                <div className="w-full aspect-video bg-muted flex items-center justify-center p-8 text-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Add your screenshot:</p>
+                    <p className="font-mono text-sm">src/assets/how-it-works-flow.png</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -250,11 +247,12 @@ const Index = () => {
             
             <div className="mt-16">
               <div className="glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift">
-                <img 
-                  src={integrations} 
-                  alt="Connected integrations including HubSpot, Stripe, and Intercom"
-                  className="w-full h-auto"
-                />
+                <div className="w-full aspect-video bg-muted flex items-center justify-center p-8 text-center">
+                  <div>
+                    <p className="text-muted-foreground mb-2">Add your screenshot:</p>
+                    <p className="font-mono text-sm">src/assets/integrations.png</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
