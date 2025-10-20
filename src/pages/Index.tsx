@@ -177,8 +177,8 @@ const Index = () => {
               <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
                 <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
                 <img 
-                  src={aiAgentInterface} 
-                  alt="AI agent interface showing customer analysis and recommended action plans" 
+                  src={customerRobert} 
+                  alt="Customer profile showing critical risk status and account details" 
                   className="w-full h-auto"
                 />
               </ParallaxCard>
@@ -191,8 +191,8 @@ const Index = () => {
               <ParallaxCard className="p-0 glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20 card-3d relative group">
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
                 <img 
-                  src={customerRobert} 
-                  alt="Customer profile showing critical risk status and account details" 
+                  src={aiAgentInterface} 
+                  alt="AI agent interface showing customer analysis and recommended action plans" 
                   className="w-full h-auto"
                 />
               </ParallaxCard>
