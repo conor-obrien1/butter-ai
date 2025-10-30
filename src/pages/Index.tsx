@@ -146,11 +146,7 @@ const Index = () => {
             <ScrollReveal className="order-2 md:order-1">
               <ParallaxCard className="p-0 glass border-2 border-primary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-primary/20 card-3d relative group">
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-                <img 
-                  src={atRiskDashboard} 
-                  alt="At-risk customers dashboard showing health scores and customer list" 
-                  className="w-full h-auto"
-                />
+                <img src={atRiskDashboard} alt="At-risk customers dashboard showing health scores and customer list" className="w-full h-auto" />
               </ParallaxCard>
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
@@ -159,7 +155,7 @@ const Index = () => {
                 <br />
                 <span className="text-stone-950">Customers Are Slipping</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Uncover hidden churn risks by connecting all your tools and data find where revenue is silently leaking.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Uncover hidden churn risks by connecting all your tools and data to find where revenue is silently leaking.</p>
             </ScrollReveal>
           </div>
 
@@ -176,11 +172,7 @@ const Index = () => {
             <ScrollReveal delay={200}>
               <ParallaxCard className="p-0 glass border-2 border-secondary/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-secondary/20 card-3d relative group">
                 <div className="absolute inset-0 bg-gradient-secondary opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-                <img 
-                  src={customerRobert} 
-                  alt="Customer profile showing critical risk status and account details" 
-                  className="w-full h-auto"
-                />
+                <img src={customerRobert} alt="Customer profile showing critical risk status and account details" className="w-full h-auto" />
               </ParallaxCard>
             </ScrollReveal>
           </div>
@@ -190,11 +182,7 @@ const Index = () => {
             <ScrollReveal className="order-2 md:order-1">
               <ParallaxCard className="p-0 glass border-2 border-accent/20 rounded-3xl shadow-2xl overflow-hidden hover-lift hover:shadow-accent/20 card-3d relative group">
                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity animate-gradient"></div>
-                <img 
-                  src={aiAgentInterface} 
-                  alt="AI agent interface showing customer analysis and recommended action plans" 
-                  className="w-full h-auto"
-                />
+                <img src={aiAgentInterface} alt="AI agent interface showing customer analysis and recommended action plans" className="w-full h-auto" />
               </ParallaxCard>
             </ScrollReveal>
             <ScrollReveal className="space-y-6 order-1 md:order-2" delay={200}>
@@ -203,7 +191,7 @@ const Index = () => {
                 <br />
                 <span className="text-foreground">Work For You</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Butter manage outreach and customer follow-ups for you. It runs your customer success playbook automatically so you can focus on building, not babysitting churn.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Butter manages outreach and customer follow-ups for you. It runs your customer success playbook automatically so you can focus on building, not babysitting churn.</p>
             </ScrollReveal>
           </div>
         </div>
