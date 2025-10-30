@@ -191,7 +191,7 @@ const Index = () => {
                 <br />
                 <span className="text-foreground">Work For You</span>
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Butter manages outreach and customer follow-ups for you. It runs your customer success playbook automatically so you can focus on building, not babysitting churn.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Butter manages outreach and customer follow-ups for you. It runs your customer success playbook automatically so you can focus on building, not babysitting customers.</p>
             </ScrollReveal>
           </div>
         </div>
