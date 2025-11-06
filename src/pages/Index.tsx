@@ -508,7 +508,11 @@ const Index = () => {
                 Be among the first to experience Butter AI. Sign up now for exclusive early access and founding member benefits.
               </p>
               <div className="flex gap-4 justify-center flex-wrap pt-4">
-                <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden">
+                <MagneticButton 
+                  size="lg" 
+                  className="text-base px-8 py-6 rounded-full bg-white text-primary hover:bg-white/90 shadow-lg hover:shadow-2xl group relative overflow-hidden"
+                  onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
+                >
                   <span className="relative z-10 flex items-center">
                     Reserve Your Spot
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
