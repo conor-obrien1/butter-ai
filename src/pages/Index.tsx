@@ -78,7 +78,11 @@ const Index = () => {
           <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{
           animationDelay: '0.3s'
         }}>
-            <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden">
+            <MagneticButton 
+              size="lg" 
+              className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden"
+              onClick={() => window.open('https://form.typeform.com/to/osJH5eWe', '_blank')}
+            >
               <span className="relative z-10 flex items-center">
                 Get Early Access
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
