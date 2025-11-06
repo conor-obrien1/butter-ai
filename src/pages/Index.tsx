@@ -10,18 +10,6 @@ import customerEmma from "@/assets/customer-emma.jpg";
 import customerRobert from "@/assets/customer-robert.jpg";
 import aiAgentInterface from "@/assets/ai-agent-interface.jpg";
 const Index = () => {
-  useEffect(() => {
-    // Load Typeform embed script
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return <div className="min-h-screen bg-background bg-gradient-mesh overflow-hidden relative">
       
       {/* Animated background orbs */}
@@ -90,15 +78,13 @@ const Index = () => {
           <div className="flex gap-4 justify-center flex-wrap pt-4 animate-slide-up" style={{
           animationDelay: '0.3s'
         }}>
-            <div data-tf-live="01K9DNFD2E5KDFMPRWTPZM34QV" className="inline-block">
-              <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden">
-                <span className="relative z-10 flex items-center">
-                  Get Early Access
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 animate-shimmer"></div>
-              </MagneticButton>
-            </div>
+            <MagneticButton size="lg" className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden">
+              <span className="relative z-10 flex items-center">
+                Get Early Access
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 animate-shimmer"></div>
+            </MagneticButton>
           </div>
           <p className="text-sm text-muted-foreground pt-4 animate-slide-up" style={{
           animationDelay: '0.4s'
