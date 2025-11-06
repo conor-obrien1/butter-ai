@@ -49,7 +49,10 @@ const Index = () => {
             <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
           </div>
           <div className="flex items-center gap-4">
-            <MagneticButton className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient">
+            <MagneticButton 
+              className="text-sm rounded-full px-6 bg-gradient-primary hover:shadow-lg hover:shadow-primary/50 transition-all animate-gradient"
+              onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
+            >
               Join Waitlist
             </MagneticButton>
           </div>
