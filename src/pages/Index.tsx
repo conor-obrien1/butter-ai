@@ -84,7 +84,7 @@ const Index = () => {
             <MagneticButton 
               size="lg" 
               className="text-base px-8 py-6 rounded-full bg-gradient-primary hover:shadow-2xl hover:shadow-primary/50 animate-pulse-glow group relative overflow-hidden"
-              onClick={() => window.open('https://form.typeform.com/to/osJH5eWe', '_blank')}
+              onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
             >
               <span className="relative z-10 flex items-center">
                 Get Early Access
@@ -319,7 +319,10 @@ const Index = () => {
                         <span className="text-sm">Email support</span>
                       </li>
                     </ul>
-                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
+                    <MagneticButton 
+                      className="w-full bg-gradient-primary rounded-full py-3"
+                      onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
+                    >
                       Reserve Spot
                     </MagneticButton>
                   </div>
@@ -367,7 +370,10 @@ const Index = () => {
                         <span className="text-sm">Custom integrations</span>
                       </li>
                     </ul>
-                    <MagneticButton className="w-full bg-gradient-primary rounded-full py-3">
+                    <MagneticButton 
+                      className="w-full bg-gradient-primary rounded-full py-3"
+                      onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
+                    >
                       Reserve Spot
                     </MagneticButton>
                   </div>
@@ -411,7 +417,11 @@ const Index = () => {
                         <span className="text-sm">Custom AI training</span>
                       </li>
                     </ul>
-                    <MagneticButton variant="outline" className="w-full border-2 rounded-full py-3">
+                    <MagneticButton 
+                      variant="outline" 
+                      className="w-full border-2 rounded-full py-3"
+                      onClick={() => window.open('https://form.typeform.com/to/vR5xA4U4', '_blank')}
+                    >
                       Contact Sales
                     </MagneticButton>
                   </div>
