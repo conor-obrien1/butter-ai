@@ -4,6 +4,7 @@ import { Target, Shield, TrendingUp, Sparkles, Zap, ArrowRight, Star } from "luc
 import { MagneticButton } from "@/components/MagneticButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxCard } from "@/components/ParallaxCard";
+import { Chatbot } from "@/components/Chatbot";
 import { useEffect, useState } from "react";
 import atRiskDashboard from "@/assets/at-risk-dashboard.jpg";
 import customerEmma from "@/assets/customer-emma.jpg";
@@ -595,6 +596,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      <Chatbot />
     </div>;
 };
 export default Index;
