@@ -1,137 +1,46 @@
-# Product Requirements Document (PRD)
-**Project:** Butter AI - Interactive Marketing & Demo Website
-**Version:** 2.0 (Phase 2 - Prototype Implementation)
+Butter AI is a SaaS platform that gives B2B companies AI powered churn prediction, real time monitoring, and automated retention tools. The core promise is simple. Stop losing customers to the unknown.
+Phase 2 evolved the project from a static marketing website into a functional interactive product demo alongside a working MVP automation. The primary goal was to satisfy the Option 2 Product Demo requirement which our Phase 1 site only partially met. We achieved this by building out two high priority interactive features identified in our initial gap analysis. An Interactive Churn Risk Calculator and an Interactive Dashboard Preview. We also built an MVP automation using N8N to demonstrate our core technical feasibility.
+This implementation transforms our site from telling users what we do to showing them. It provides immediate tangible value and a clear proof of concept.
 
----
+Core Features Implemented
+Phase 1 established the marketing foundation. Hero section, features, how it works, testimonials, pricing, FAQ. All complete. Consistent branding with glass morphism UI throughout. Lead generation through Typeform with all Get Started CTAs linking to our main waitlist form. We also integrated an AI powered chatbot in Phase 1.
+Phase 2 added the interactive layer and backend automation. The Interactive Churn Risk Calculator is complete and uses AI. The Interactive Dashboard Preview is complete and does not use AI but simulates what the full product experience will look like. The N8N MVP Automation is complete and uses an AI agent running ChatGPT 4.0.
+Phase 3 remains on the roadmap. AI generated blog section for SEO and thought leadership. AI powered lead qualification to replace static forms. Onboarding tutorial flow to guide new users. Integration with HubSpot, Intercom, and Stripe for real customer data.
 
-### 1. Overview & Goal
+AI Specification
+Our prototype uses AI in three distinct functional ways.
+The first is the AI Powered Chatbot built in Phase 1. It acts as a 24/7 sales assistant. The chatbot is primed with a system prompt that gives it context about Butter AI, our product features, and our target audience. It answers user questions about churn, pricing, and technical details. It appears as a floating chat widget available on all pages. It uses Google Gemini 2.5 Flash via the Lovable AI Gateway and streams token by token responses for a real time feel.
+The second is the Interactive Churn Risk Calculator built in Phase 2. This is our primary proof of concept demo on the marketing site. The user inputs sample customer metrics like NPS score, months subscribed, and support tickets. This data is sent to a Supabase Edge Function. The function formats the data into a prompt for the Gemini API asking for a structured analysis. The AI model analyzes the inputs and returns a JSON object containing a risk score from 0 to 100, a risk level of Low Medium or High, and an array of short actionable recommendations. The frontend parses this JSON and displays the results in a visual gauge and a bulleted list.
+The calculator appears as a dedicated section on the homepage between How It Works and Testimonials. It uses Google Gemini via Supabase Edge Function. The key is a structured JSON mode prompt that ensures the AI response is machine readable and not just conversational text.
+The third is the N8N MVP Automation. This is the core tool in our product and demonstrates our technical feasibility. The automation links together Typeform for data collection, an AI agent running ChatGPT 4.0 for data transformation, Google Sheets for storage, and eventually Slack for notifications. The agent is just one part in the process of being able to transform customer data into something useful.
+We scoped down the automation for practicality. To get a working MVP that showed we could get customer information, transform it in some way, and provide something useful we needed actual customer data. We were hoping to use HubSpot, Intercom, and Stripe data to more fully flesh out the predictive churn analysis. So we scoped down to just a churned customer survey to demonstrate that we could take information and transform it in a particular way without actually having access to the customer data we need yet.
+The automation itself was built more manually than the marketing site. I wrote the system prompts myself. The agent does the task but in terms of how AI was used in building out the N8N process it was pretty light. The strategic decisions about what to build and how were mine. AI was a tool not a substitute for thinking through the workflow.
 
-**Product Purpose:** Butter AI is a SaaS platform that gives B2B companies AI-powered churn prediction, real-time monitoring, and automated retention tools to "Stop Losing Customers to the Unknown."
+Technical Architecture
+Phase 2 expanded our stack while maintaining the core foundation.
+Frontend is React, TypeScript, Tailwind CSS, and Framer Motion for animations. Charts and visualization use recharts for both the new Calculator gauge and the Dashboard Preview charts.
+For the chatbot AI integration is client side with the Lovable AI Gateway streaming Gemini responses.
+For the calculator the client sends a fetch request to an edge function. The Supabase Edge Function receives the request, validates inputs, and securely calls the Gemini API with a system prompt. The Gemini API processes the request and returns a structured JSON response.
+For the MVP automation the stack is N8N as the workflow orchestration layer. Typeform handles data collection from churned customer surveys. The AI agent runs ChatGPT 4.0 and processes the survey responses to extract insights and generate recommendations. Google Sheets stores the transformed data. Slack integration is planned for sending alerts to customer success teams.
+Forms use Typeform for both the marketing site waitlist and the churned customer survey automation. Hosting and CI/CD run through GitHub and Vercel.
 
-**Phase 2 Update:** This phase successfully evolved the project from a static "brochure" website (Phase 1) into a functional, interactive product demo. The primary goal was to satisfy the **Option 2: Product Demo** homework requirement, which our Phase 1 site only partially met. We achieved this by building out the two high-priority interactive features identified in our initial gap analysis: an **Interactive Churn Risk Calculator** and an **Interactive Dashboard Preview**.
+Prompting Strategy and Iteration Log
+We used Google AI Studio's Build feature extensively to generate both UI components and the core AI logic. Three examples show how iteration improved our results on the marketing site.
+For the Calculator UI Component the initial prompt asked for a React component using TypeScript and Tailwind CSS with three input sliders for NPS, Support Tickets, and Months Subscribed plus a Calculate button. This produced a functional but visually plain component. The refinement prompt asked to apply the glass morphism design system with backdrop blur, semi transparent background, and border styling. It also asked to style the button to match our primary gradient and add a placeholder for a recharts Gauge component. This successfully generated a component matching our existing brand identity and saved significant styling time.
+For the Calculator's AI Logic the initial prompt simply asked to write a prompt for an AI that takes user metrics and predicts churn. The result was a conversational response like "Based on those metrics the customer seems at risk" which was unusable for a UI. The refinement prompt was highly structured. It instructed the AI to act as a B2B churn prediction analyst. It specified the input format as NPS, Tickets, and Months values. It required the response to be only a valid JSON object with no markdown wrappers or other text. It defined the exact structure with risk score as a number from 0 to 100, risk level as Low Medium or High, and recommendations as an array of strings. It explained the scoring logic where low NPS and high tickets increase risk while high subscription length slightly decreases risk. This structured prompt was critical. It forces the AI to return machine readable data that our React app can directly parse and display.
+For debugging the Interactive Dashboard the initial prompt stated that the recharts bar chart was not re-rendering when filter state updated in React. The AI provided several possible reasons including state mutation, incorrect data prop, and missing key. The refinement prompt included the actual component code and asked for the correct way to filter the mockData array based on filter category state and update the chart data immutably using useState. The AI provided the corrected code snippet using a useEffect hook and a non mutating filter method which solved the bug.
+For the N8N automation system prompt I wrote this myself rather than using AI to generate it. The prompt instructs the agent to analyze churned customer survey responses and extract key themes around why customers left, what features they valued, and what would have made them stay. It outputs structured insights that can be used by customer success teams to identify patterns and inform retention strategy. The prompt was refined through testing with sample survey responses to ensure the output was actionable and consistent.
 
-This implementation transforms our site from "telling" users what we do to "showing" them, providing immediate, tangible value and a clear proof of concept.
+UX and Design Notes
+The primary UX goal for Phase 2 was to provide instant value. The calculator gives users an immediate tangible win by turning their inputs into an AI driven insight. This builds trust and makes the product value proposition concrete.
+We successfully extended the Phase 1 glass morphism and gradient design system to the new interactive components. The recharts library was customized to fit our color palette.
+There are limitations and tradeoffs to acknowledge. The Churn Risk Calculator is clearly labeled as a demo. It is not a statistically perfect model but an illustrative tool to showcase the concept of our AI analytical capabilities. The Dashboard Preview is also illustrative. It uses a static mockData.json file and is not connected to a live database. The interactivity through filtering is all client side. But it effectively simulates the look and feel of the final product.
+The N8N automation is functional but scoped to the churned customer survey use case. It demonstrates that we can ingest data, transform it with AI, and output something useful. The limitation is that we do not yet have access to real customer data from HubSpot, Intercom, or Stripe. The automation proves technical feasibility. The next step is getting access to the data that will make it valuable.
 
----
-
-### 2. Core Features (Implemented)
-
-This list details the features built across Phase 1 and Phase 2, with their current status.
-
-| Feature | Status | Type | AI Feature? |
-| :--- | :--- | :--- | :--- |
-| **Phase 1: Marketing Site** | | | |
-| Hero, Features, How It Works, Testimonials, Pricing, FAQ | ✅ Complete | Marketing | No |
-| Consistent Branding & Glass Morphism UI | ✅ Complete | Design | No |
-| Lead Gen (Typeform) | ✅ Complete | Marketing | No |
-| **Phase 1: AI Integration** | | | |
-| AI-Powered Chatbot | ✅ Complete | Interactive | **Yes** |
-| **Phase 2: Interactive Demos** | | | |
-| Interactive Churn Risk Calculator | ✅ Complete | Interactive | **Yes** |
-| Interactive Dashboard Preview | ✅ Complete | Interactive | No |
-| **Phase 3: Future Roadmap** | | | |
-| AI-Generated Blog Section | ⚠️ Planned | Content | **Yes** |
-| AI-Powered Lead Qualification | ⚠️ Planned | Interactive | **Yes** |
-| Onboarding Tutorial Flow | ⚠️ Planned | UI/UX | No |
-
----
-
-### 3. AI Specification
-
-Our prototype uses AI in two distinct, functional ways.
-
-#### 1. AI-Powered Chatbot (Phase 1)
-* **What it does:** The chatbot (floating widget) acts as a 24/7 sales assistant. It's primed with a system prompt that gives it context about Butter AI, our product features, and our target audience. It answers user questions about churn, pricing, and technical details.
-* **Where it appears:** A floating chat widget available on all pages.
-* **Model/Feature:** Uses **Google Gemini 2.5 Flash** via the Lovable AI Gateway. It streams token-by-token responses for a real-time feel.
-
-#### 2. Interactive Churn Risk Calculator (Phase 2)
-* **What it does:** This is our primary "proof of concept" demo.
-    1.  The user inputs sample customer metrics (e.g., NPS score, months subscribed, support tickets).
-    2.  This data is sent to a Supabase Edge Function.
-    3.  The function formats the data into a prompt for the Gemini API, asking for a structured analysis.
-    4.  The AI model analyzes the inputs and returns a **JSON object** containing a `risk_score` (0-100), a `risk_level` ("Low", "Medium", "High"), and an array of short, actionable `recommendations`.
-    5.  The frontend parses this JSON and displays the results in a visual gauge and a bulleted list.
-* **Where it appears:** A new, dedicated section on the homepage, between "How It Works" and "Testimonials."
-* **Model/Feature:** Uses **Google Gemini** (via Supabase Edge Function). The key is a structured "JSON mode" prompt that ensures the AI's response is machine-readable and not just conversational text.
-
----
-
-### 4. Technical Architecture
-
-The Phase 2 build expanded our stack while maintaining the core foundation.
-
-* **Frontend:** React, TypeScript, Tailwind CSS, Framer Motion (for animations).
-* **Charts/Viz:** `recharts` (Used for the new Calculator gauge and the Dashboard Preview charts).
-* **AI (Chatbot):** Client-side integration with **Lovable AI Gateway** (streaming Gemini responses).
-* **AI (Calculator):**
-    1.  **Client (React)** sends a fetch request to an edge function.
-    2.  **Backend (Supabase Edge Function)** receives the request, validates inputs, and securely calls the Gemini API with a system prompt.
-    3.  **AI (Gemini API)** processes the request and returns a structured JSON response.
-* **Forms:** Typeform (all "Get Started" CTAs still link to our main waitlist form).
-* **Hosting & CI/CD:** GitHub + Vercel (or AI Studio Publish).
-
----
-
-### 5. Prompting Strategy & Iteration Log
-
-We used Google AI Studio's "Build" feature extensively to generate both UI components and the core AI logic.
-
-#### Prompt 1: Generating the Calculator UI Component
-
-* **Initial Prompt:**
-    > "Generate a React component using TypeScript and Tailwind CSS for a 'Churn Risk Calculator'. It needs three input sliders: 'NPS' (0-10), 'Support Tickets' (0-20), and 'Months Subscribed' (1-36). Include a 'Calculate' button."
-* **Result:** This produced a functional but visually plain component.
-* **Refinement (Iteration):**
-    > "Refine the last component. Apply the 'glass morphism' design system: a `backdrop-blur-lg`, `bg-white/10`, and `border border-white/20`. Style the button to match my project's primary gradient. After the button, add a placeholder for a `recharts` Gauge component."
-* **Outcome:** This prompt successfully generated a component that matched our existing brand identity, saving significant styling time.
-
-#### Prompt 2: Creating the Calculator's AI Logic (System Prompt)
-
-* **Initial Prompt:**
-    > "Write a prompt for an AI that takes user metrics and predicts churn."
-* **Result:** The AI generated a *conversational* response (e.g., "Based on those metrics, the customer seems at risk..."). This was unusable for a UI.
-* **Refinement (Iteration):**
-    > "Act as a B2B churn prediction analyst. The user will provide metrics in the format: `NPS: 7, Tickets: 12, Months: 4`.
-    >
-    > Your response MUST be only a valid JSON object. Do not include markdown \`\`\`json wrappers or any other text.
-    >
-    > The JSON object must have this exact structure:
-    > {
-    > "risk_score": <number from 0-100>,
-    > "risk_level": <"Low", "Medium", or "High">,
-    > "recommendations": [<string>, <string>]
-    > }
-    >
-    > Base the score on the inputs: low NPS and high tickets increase risk. High subscription length slightly decreases risk."
-* **Outcome:** This highly-structured prompt was critical. It forces the AI to return machine-readable data that our React app can directly parse and display.
-
-#### Prompt 3: Debugging the Interactive Dashboard
-
-* **Initial Prompt:**
-    > "My `recharts` bar chart isn't re-rendering when I update my filter state in React."
-* **Result:** The AI provided several possible reasons (state mutation, incorrect `data` prop, missing key).
-* **Refinement (Iteration):**
-    > "Here is my code: [...pasted component code...]. I think I'm mutating the state directly. Show me the correct way to filter my `mockData` array based on my `filterCategory` state and update the chart data immutably using `useState`."
-* **Outcome:** The AI provided the corrected code snippet using a `useEffect` hook and a non-mutating `.filter()` method, which solved the bug.
-
----
-
-### 6. UX & Design Notes
-
-* **UX Strategy:** The primary UX goal for Phase 2 was to provide **instant value**. The calculator gives users an immediate, tangible "win" by turning their inputs into an AI-driven insight. This builds trust and makes the product's value proposition concrete.
-* **Design:** We successfully extended the Phase 1 "glass morphism" and gradient design system to the new interactive components. The `recharts` library was customized to fit our color palette.
-* **Limitations & Tradeoffs:**
-    * The **Churn Risk Calculator** is clearly labeled as a "demo." It's not a statistically perfect model but an *illustrative tool* to showcase the *concept* of our AI's analytical capabilities.
-    * The **Dashboard Preview** is also illustrative. It uses a static `mockData.json` file and is *not* connected to a live database. The interactivity (filtering) is all client-side, but it effectively simulates the look and feel of the final product.
-
----
-
-### 7. Next Steps (Phase 3)
-
-With the core prototype now functional and meeting all homework requirements, Phase 3 will focus on polishing the experience and deepening the AI integration.
-
-1.  **Implement AI-Generated Content:** Build the "Blog" section from our original roadmap, using AI to generate 3-5 static articles on churn prevention. This will build SEO and thought leadership.
-2.  **Connect AI Systems:** A key priority is to connect our AI features. We will explore feeding the Calculator's results into the Chatbot's context. A user could ask, "Why did I get a 78% risk score?" and the chatbot could explain the reasoning based on their inputs.
-3.  **Refine Lead Gen (AI Qualification):** As a stretch goal, we will A/B test replacing the static Typeform with a conversational AI lead qualification bot that can ask for the user's email *after* providing value.
-4.  **Mobile Polish:** Conduct a full review of the new interactive components on mobile to ensure the charts and input sliders are responsive and usable.
+Next Steps for Phase 3
+With the core prototype now functional and meeting all requirements Phase 3 will focus on polishing the experience and deepening the AI integration.
+First we will get access to real customer data. This is the critical dependency. Our core value proposition is predictive churn analysis and to deliver on that we need HubSpot, Intercom, and Stripe integrations. The N8N automation is ready to scale once we have the data flowing.
+Second we will implement AI generated content. We will build the Blog section from our original roadmap using AI to generate 3 to 5 static articles on churn prevention. This will build SEO and thought leadership.
+Third we will connect AI systems. A key priority is to feed the Calculator results into the Chatbot context. A user could ask why they got a 78 percent risk score and the chatbot could explain the reasoning based on their inputs. This creates a more cohesive intelligent experience. We will also explore connecting the N8N automation outputs to the dashboard so users can see real insights from their customer data.
+Fourth we will refine lead generation with AI qualification. As a stretch goal we will A/B test replacing the static Typeform with a conversational AI lead qualification bot that can ask for the user email after providing value.
+Fifth we will do a mobile polish pass. We will conduct a full review of the new interactive components on mobile to ensure the charts and input sliders are responsive and usable.
