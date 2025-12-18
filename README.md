@@ -151,13 +151,3 @@ For the automation I wrote the system prompts myself. The strategic decisions ab
 3. **Implement AI generated content.** Build the Blog section using AI for SEO and thought leadership.
 
 4. **Mobile polish.** Full review of interactive components to ensure charts and input sliders are responsive.
-
-## Resources
-
-- [Lovable Documentation](https://docs.lovable.dev/)
-- [Supabase Edge Functions Guide](https://supabase.com/docs/guides/functions)
-- [Prompt Engineering Guide](https://www.promptingguide.ai/)
-
-## License
-
-This project is part of an academic assignment for ESTEEM at the University of Notre Dame.
